@@ -1,3 +1,21 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "eqeqeq": "error",
+    "curly": "error",
+    "no-compare-neg-zero": "error",
+    "no-constant-condition": "error",
+    "no-duplicate-case": "error",
+    "no-duplicate-imports": "error",
+    "no-dupe-keys": "error",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-unused-vars": "warn",
+    "camelcase": ["warn", { "ignoreImports": true }],
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "no-console": "warn",
+    "no-empty-function": "error",
+    "no-empty": "error",
+    "arrow-parens": ["error", "always"]
+  }
 }
