@@ -1,0 +1,71 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of nodename: CI/CDon:
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 16.x]
+
+    steps:
+      # This is the first standard action that we must include in your workflow before the other actions when your workflow requires a copy of your repository's code
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: node_modules-v1-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            node_modules-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting checks
+        run: npm run lint
+
+      - name: Run formatting checks
+        run: npm run format
+
+      - name: Run tests
+        run: npm test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Run the tests and generate coverage reports
+        run: npm test -- --coverage --if-present
+
+      - name: Build
+        run: npm run build
+
+      # LAST STEP: DEPLOY
+      - name: Deploy
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          npm run deploy
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{ secrets.ACTION_DEPLOY_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+          VITE_API_KEY: ${{ secrets.API_KEY }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
