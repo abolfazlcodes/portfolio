@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "prettier"],
   "rules": {
     "eqeqeq": "error",
     "curly": "error",
@@ -12,7 +12,11 @@
     "no-self-compare": "error",
     "no-unused-vars": "warn",
     "camelcase": ["warn", { "ignoreImports": true }],
-    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "func-style": [
+      "error",
+      "declaration",
+      { "allowArrowFunctions": true }
+    ],
     "no-console": "warn",
     "no-empty-function": "error",
     "no-empty": "error",
