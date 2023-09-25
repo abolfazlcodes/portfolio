@@ -1,19 +1,19 @@
 import { Fira_Code } from 'next/font/google';
+import Navbar from './Navbar';
+import Footer from './Footer';
 const inter = Fira_Code({
   subsets: ['latin'],
 });
 
 function Layout({ children }: { children?: React.ReactNode }) {
   return (
-    <>
-      <nav></nav>
-      <main
-        className={`${inter.className} m-auto h-full-dvh max-w-screen-2xl`}
-      >
+    <div className='m-auto flex h-full max-w-screen-2xl flex-col'>
+      <Navbar />
+      <main className={`${inter.className} h-full-dvh  flex-1`}>
         {children}
       </main>
-      <footer></footer>
-    </>
+      <Footer />
+    </div>
   );
 }
 
