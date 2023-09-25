@@ -7,12 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check --ignore-path .gitignore .prettierignore",
+    "format:fix": "prettier --write --ignore-path .gitignore .prettierignore",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "cypress:open": "cypress open",
-    "deploy": "gh-pages -d next"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@types/node": "20.6.4",
