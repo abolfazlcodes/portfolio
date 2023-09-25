@@ -8,7 +8,7 @@ function Layout({ children }: { children?: React.ReactNode }) {
     <>
       <nav></nav>
       <main
-        className={`${inter.className} m-auto h-full-dvh max-w-screen-2xl border`}
+        className={`${inter.className} m-auto h-full-dvh max-w-screen-2xl`}
       >
         {children}
       </main>
