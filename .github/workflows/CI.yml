@@ -66,7 +66,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Run the tests and generate coverage reports
-        run: npm test -- --coverage --if-present
+        run: npm test -- --coverage
 
       - name: Build
         run: npm run build
