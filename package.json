@@ -13,6 +13,7 @@
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "cypress:open": "cypress open",
+    "predeploy": "next build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
