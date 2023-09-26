@@ -13,7 +13,8 @@ export default defineConfig({
     coverage: {
       include: ['src/**/*'],
       reporter: ['text', 'json', 'html'],
-      all: true,
+      perFile: true,
+      // all: true,
       lines: 100,
       branches: 90,
       functions: 80,
