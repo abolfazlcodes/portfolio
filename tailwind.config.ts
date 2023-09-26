@@ -18,6 +18,10 @@ const config: Config = {
         'full-dvh': '100dvh',
         18: '4.5rem',
       },
+      screens: {
+        md: '640px',
+        lg: '950px',
+      },
     },
   },
   plugins: [],

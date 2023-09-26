@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 
 function ListWrapper() {
   return (
-    <ul className='relative ml-auto flex w-10/12 items-center'>
+    <ul className='hidden w-10/12 md:relative md:ml-auto md:flex md:items-center'>
       {navigationLinks.map((linkItem, index) => (
         <ListItem
           key={linkItem.id}
