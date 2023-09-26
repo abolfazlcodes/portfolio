@@ -8,15 +8,24 @@ function Hero() {
     'const githublink = "https://github.com/abolfazlcodes"';
 
   return (
-    <header className='flex h-2/3 w-1/3 flex-col justify-evenly'>
+    <header
+      data-testid='element-header'
+      className='flex h-2/3 w-1/3 flex-col justify-evenly'
+    >
       <div>
         <p className='text-xl font-medium text-[#E5E9F0]'>
           Hi all. I am
         </p>
-        <h1 className='text-4.2 font-normal capitalize leading-[6rem] text-[#E5E9F0]'>
+        <h1
+          data-testid='element-title'
+          className='text-4.2 font-normal capitalize leading-[6rem] text-[#E5E9F0]'
+        >
           abolfazl jamshidi
         </h1>
-        <p className='text-4xl font-medium text-[#4D5BCE]'>
+        <p
+          data-testid='element-role'
+          className='text-4xl font-medium text-[#4D5BCE]'
+        >
           &gt; Front-end developer
         </p>
       </div>
