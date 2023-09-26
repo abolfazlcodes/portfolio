@@ -9,10 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial':
-          'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'game-board':
+          'linear-gradient(150deg, rgba(23, 85, 83, 0.7), rgba(67, 217, 173, 0.09))',
       },
       height: {
         'full-dvh': '100dvh',
@@ -21,6 +19,13 @@ const config: Config = {
       screens: {
         md: '640px',
         lg: '950px',
+      },
+      fontSize: {
+        '4.2': '4.2rem',
+      },
+      boxShadow: {
+        'game-box-shadow':
+          '0px 2px 0px 0px rgba(255, 255, 255, 0.3) inset',
       },
     },
   },

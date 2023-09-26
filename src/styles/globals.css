@@ -41,15 +41,15 @@ body {
   color: #607b96;
 }
 
-main::before,
-main::after {
+.main::before,
+.main::after {
   content: '';
   position: absolute;
   z-index: -1;
   opacity: 0.8;
 }
 
-main::before {
+.main::before {
   background: var(--third-glow);
   border-radius: 50%;
   width: 40vw;
@@ -60,31 +60,26 @@ main::before {
   left: calc(70vw);
 }
 
-main::after {
+.main::after {
   background: var(--secondary-glow);
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   border: 1px solid red;
   filter: blur(90px);
   top: calc(50vh - 40vw / 2);
-  left: calc(50vw - 20vw / 2);
+  left: calc(50vw - 1vw / 2);
 }
 
 /* gradient background responsive */
 @media screen and (max-width: 777px) {
-  main::before,
-  main::after {
-    opacity: 0.8;
-  }
-
-  main::before {
+  .main::before {
     width: 30vw;
     height: 30vw;
     left: calc(50dvw);
   }
 
-  main::after {
+  .main::after {
     width: 400px;
     height: 400px;
     left: calc(50vw - 55vw / 2);
@@ -92,18 +87,13 @@ main::after {
 }
 
 @media screen and (max-width: 475px) {
-  main::before,
-  main::after {
-    opacity: 0.9;
-  }
-
-  main::before {
+  .main::before {
     width: 20vw;
     height: 20vw;
     left: calc(50dvw);
   }
 
-  main::after {
+  .main::after {
     width: 250px;
     height: 250px;
     left: calc(50vw - 55vw / 2);
@@ -135,13 +125,11 @@ main::after {
 }
 
 main::before {
-  /*...previous props*/
   animation: animateBefore 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
 }
 
 main::after {
-  /*...previous props*/
   animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
 }

@@ -1,7 +1,10 @@
 import { navigationLinks } from '@/constants';
 import ListItem from './ListItem';
+import { useRouter } from 'next/router';
 
 function ListWrapper() {
+  const { pathname } = useRouter();
+
   return (
     <ul
       data-testid='list-element'
@@ -13,6 +16,7 @@ function ListWrapper() {
           link={linkItem.link}
           title={linkItem.title}
           index={index}
+          active={pathname === linkItem.link}
         />
       ))}
     </ul>
