@@ -1,9 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
-import { expect } from 'vitest';
+import { beforeAll, expect, vi } from 'vitest';
 import { navigationLinks } from '@/constants';
 
 describe('Navbar Component Tests', () => {
+  beforeAll(() => {
+    vi.mock('next/router', () => require('next-router-mock'));
+  });
+
   it('should render the title for logo component', () => {
     render(<Navbar />);
     const logoHeader = screen.getByTestId('logo-header');

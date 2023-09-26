@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
-import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
-SyntaxHighlighter.registerLanguage('js', js);
+import SingleLineCodeBlock from './SingleLineCodeBlock';
+import Comment from './Comment';
 
 /* eslint-disable react/jsx-no-comment-textnodes */
 function Hero() {
@@ -24,28 +22,19 @@ function Hero() {
       </div>
 
       <div>
-        <p className='text-xl font-medium text-[#607b96]'>
-          // enjoy playing the snake game
-        </p>
-        <p className='text-xl font-medium leading-[2.5rem] text-[#607b96]'>
+        <Comment>// enjoy playing the snake game</Comment>
+        <Comment>
           // you can also see it on my Github page
-        </p>
+        </Comment>
         <Link
           href='https://github.com/abolfazlcodes'
           target='_blank'
           className='text-xl'
         >
-          <SyntaxHighlighter
+          <SingleLineCodeBlock
+            code={code}
             language='javascript'
-            customStyle={{
-              padding: '0',
-              marginTop: '0',
-              fontWeight: '500',
-            }}
-            style={dracula}
-          >
-            {code}
-          </SyntaxHighlighter>
+          />
         </Link>
       </div>
     </header>
