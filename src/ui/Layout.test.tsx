@@ -1,9 +1,19 @@
-import { expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Index from '../pages/index';
+import Layout from './Layout';
+import { expect } from 'vitest';
 
-test('Pages Router', () => {
-  render(<Index />);
-  const headline = screen.getByText(/hello world/i);
-  expect(headline).toBeInTheDocument();
+describe('Layout Component Tests', () => {
+  it('should render layout component properly', () => {
+    render(<Layout />);
+
+    const layoutWrapper = screen.getByTestId(
+      'element-layout-wrapper'
+    );
+    const layoutMainElement = screen.getByTestId(
+      'element-layout-main'
+    );
+
+    expect(layoutWrapper).toBeInTheDocument();
+    expect(layoutMainElement).toBeInTheDocument();
+  });
 });
