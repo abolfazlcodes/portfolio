@@ -10,7 +10,7 @@ function Navbar() {
         <Logo />
         <ListWrapper />
       </div>
-      <div className='group relative hidden w-2/12 justify-end border-l border-[#1E2D3D] text-[#607B96] md:flex'>
+      <div className='group relative hidden w-max justify-end border-l border-[#1E2D3D] pl-2 text-[#607B96] md:flex'>
         <Link
           href='/contact-me'
           className='flex h-18 w-full items-center justify-end text-xl font-medium duration-200 hover:text-[#FFF]'
