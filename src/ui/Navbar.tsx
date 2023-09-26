@@ -9,12 +9,12 @@ function Navbar() {
         <Logo />
         <ListWrapper />
       </div>
-      <div className='group relative w-1/12 justify-end border-l border-[#1E2D3D]'>
+      <div className='group relative w-1/12 justify-end border-l border-[#1E2D3D] text-[#607B96]'>
         <Link
           href='/contact-me'
           className='h-18 flex w-full items-center justify-center text-xl font-medium duration-200 hover:text-[#FFF]'
         >
-          _contacts-me
+          _contact-me
         </Link>
         <span className='absolute bottom-0 left-0 block h-0 w-full bg-[#FEA55F] duration-200  group-hover:h-[3px]'></span>
       </div>
