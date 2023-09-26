@@ -19,7 +19,7 @@ function Navbar() {
         </Link>
         <span className='absolute bottom-0 left-0 block h-0 w-full bg-[#FEA55F] duration-200  group-hover:h-[3px]'></span>
       </div>
-      <div className='flex w-2/12 cursor-pointer items-center justify-end text-5xl font-medium md:hidden'>
+      <div className='flex w-2/12 cursor-pointer items-center justify-end text-4xl font-medium md:hidden'>
         <LuAlignRight />
       </div>
     </nav>

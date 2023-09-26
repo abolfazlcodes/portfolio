@@ -46,7 +46,7 @@ main::after {
   content: '';
   position: absolute;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 main::before {
@@ -67,12 +67,17 @@ main::after {
   height: 500px;
   border: 1px solid red;
   filter: blur(90px);
-  top: calc(50vh - 45vw / 2);
+  top: calc(50vh - 40vw / 2);
   left: calc(50vw - 20vw / 2);
 }
 
 /* gradient background responsive */
 @media screen and (max-width: 777px) {
+  main::before,
+  main::after {
+    opacity: 0.8;
+  }
+
   main::before {
     width: 30vw;
     height: 30vw;
@@ -82,6 +87,25 @@ main::after {
   main::after {
     width: 400px;
     height: 400px;
+    left: calc(50vw - 55vw / 2);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  main::before,
+  main::after {
+    opacity: 0.9;
+  }
+
+  main::before {
+    width: 20vw;
+    height: 20vw;
+    left: calc(50dvw);
+  }
+
+  main::after {
+    width: 250px;
+    height: 250px;
     left: calc(50vw - 55vw / 2);
   }
 }
