@@ -39,6 +39,27 @@ html {
 body {
   background: #011627;
   color: #607b96;
+  accent-color: #43d9ad;
+}
+::selection {
+  background-color: #43d9ad;
+}
+
+pre {
+  background: none !important;
+  border: none !important;
+}
+
+span[class='token']:first-child {
+  color: #4d5bce !important;
+}
+
+code span {
+  color: #43d9ad;
+}
+
+span[class='token']:last-child {
+  color: #e99287 !important;
 }
 
 .main::before,
