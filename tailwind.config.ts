@@ -27,6 +27,34 @@ const config: Config = {
         'game-box-shadow':
           '0px 2px 0px 0px rgba(255, 255, 255, 0.3) inset',
       },
+      keyframes: {
+        titleLoad: {
+          '0%': { width: '0', left: '0' },
+          '50%': { width: '100%', left: '0' },
+          '100%': { width: '0', left: '100%' },
+        },
+        roleLoad: {
+          '0%': { width: '0', left: '0' },
+          '50%': { width: '100%', left: '0' },
+          '100%': { width: '0', left: '100%' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        secFadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '.5' },
+        },
+      },
+      animation: {
+        'load-title':
+          'titleLoad 3.5s cubic-bezier(.41,.09,.11,.94) forwards',
+        'load-role':
+          'roleLoad 3.5s 2s cubic-bezier(.41,.09,.11,.94) forwards',
+        'fadeIn-title': 'fadeIn 2s 1.6s forwards',
+        'fadeIn-role': 'secFadeIn 2s 3.2s forwards',
+      },
     },
   },
   plugins: [],
