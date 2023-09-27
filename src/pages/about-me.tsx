@@ -16,7 +16,7 @@ type IndexPageProps = {};
 
 function AboutMe({}: IndexPageProps) {
   return (
-    <DynamicPageTransition className='h-full'>
+    <DynamicPageTransition>
       <section className='flex h-full items-center justify-center'>
         <DynamicHero />
       </section>
