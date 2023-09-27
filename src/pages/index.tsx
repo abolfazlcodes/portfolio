@@ -1,4 +1,9 @@
+// import dynamic from 'next/dynamic';
 import Hero from '@/ui/Hero';
+
+// const DynamicHero = dynamic(() => import('../ui/Hero'), {
+//   loading: () => <p>loading ...</p>,
+// });
 
 export default function Home() {
   return (
