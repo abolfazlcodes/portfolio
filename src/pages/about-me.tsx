@@ -1,15 +1,26 @@
-import Hero from '@/ui/Hero';
-import PageTransition from '@/ui/PageTransition';
+import dynamic from 'next/dynamic';
+
+const DynamicHero = dynamic(() => import('../ui/Hero'), {
+  ssr: true,
+});
+
+const DynamicPageTransition = dynamic(
+  () => import('../ui/PageTransition'),
+  {
+    loading: () => <p>loading ...</p>,
+    ssr: true,
+  }
+);
 
 type IndexPageProps = {};
 
 function AboutMe({}: IndexPageProps) {
   return (
-    <PageTransition className='h-full'>
+    <DynamicPageTransition className='h-full'>
       <section className='flex h-full items-center justify-center'>
-        <Hero />
+        <DynamicHero />
       </section>
-    </PageTransition>
+    </DynamicPageTransition>
   );
 }
 

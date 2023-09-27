@@ -1,6 +1,9 @@
 function Loader() {
   return (
-    <section className='absolute left-0 top-0 z-10 flex h-full w-full animate-fadeout-loader flex-col items-center justify-center bg-[#232323]'>
+    <section
+      data-testid='section-element'
+      className='absolute left-0 top-0 z-10 flex h-full w-full animate-fadeout-loader flex-col items-center justify-center bg-[#232323]'
+    >
       <article>
         <div className='relative'>
           <h1
