@@ -53,12 +53,12 @@ const config: Config = {
       },
       animation: {
         'load-title':
-          'titleLoad 3.5s cubic-bezier(.41,.09,.11,.94) forwards',
+          'titleLoad 3s cubic-bezier(.41,.09,.11,.94) forwards',
         'load-role':
-          'roleLoad 3.5s 2s cubic-bezier(.41,.09,.11,.94) forwards',
+          'roleLoad 3s 2s cubic-bezier(.41,.09,.11,.94) forwards',
         'fadeIn-title': 'fadeIn 2s 1.6s forwards',
         'fadeIn-role': 'secFadeIn 2s 3.2s forwards',
-        'fadeout-loader': 'fadeLoader 2s 6.2s forwards',
+        'fadeout-loader': 'fadeLoader 2s 5s forwards',
       },
     },
   },

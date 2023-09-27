@@ -16,7 +16,7 @@ type IndexPageProps = {};
 
 function Home({}: IndexPageProps) {
   return (
-    <DynamicPageTransition className='h-full'>
+    <DynamicPageTransition>
       <section className='flex h-full items-center justify-center'>
         <DynamicHero />
         <article className='h-3/4 w-1/3 rounded-lg border border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl'>
