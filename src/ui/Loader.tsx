@@ -58,7 +58,7 @@ function Loader() {
   //   }
 
   return (
-    <section className='absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center bg-[#232323]'>
+    <section className='animate-fadeout-loader absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center bg-[#232323]'>
       <article>
         <div className='relative'>
           <h1

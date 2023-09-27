@@ -46,6 +46,10 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '.5' },
         },
+        fadeLoader: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
       },
       animation: {
         'load-title':
@@ -54,6 +58,7 @@ const config: Config = {
           'roleLoad 3.5s 2s cubic-bezier(.41,.09,.11,.94) forwards',
         'fadeIn-title': 'fadeIn 2s 1.6s forwards',
         'fadeIn-role': 'secFadeIn 2s 3.2s forwards',
+        'fadeout-loader': 'fadeLoader 2s 6.2s forwards',
       },
     },
   },
