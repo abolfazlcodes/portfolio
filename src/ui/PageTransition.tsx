@@ -1,7 +1,9 @@
 import React from 'react';
-import { motion, HTMLMotionProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-type PageTransitionProps = HTMLMotionProps<'section'>;
+interface PageTransitionProps {
+  children?: React.ReactNode;
+}
 
 function PageTransition({ children }: PageTransitionProps) {
   const variants = {
@@ -13,6 +15,7 @@ function PageTransition({ children }: PageTransitionProps) {
 
   return (
     <motion.div
+      data-testid='element-transition'
       initial='hidden'
       animate='enter'
       exit='exit'
