@@ -3,3 +3,6 @@ export const navigationLinks = [
   { id: 2, link: '/about-me', title: '_about-me' },
   { id: 3, link: '/projects', title: '_projects' },
 ];
+
+export const CODE_LINK =
+  'const githublink = "https://github.com/abolfazlcodes"';

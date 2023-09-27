@@ -14,17 +14,14 @@ const DynamicPageTransition = dynamic(
 
 type IndexPageProps = {};
 
-function Home({}: IndexPageProps) {
+function AboutMe({}: IndexPageProps) {
   return (
     <DynamicPageTransition className='h-full'>
       <section className='flex h-full items-center justify-center'>
         <DynamicHero />
-        <article className='h-3/4 w-1/3 rounded-lg border border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl'>
-          game
-        </article>
       </section>
     </DynamicPageTransition>
   );
 }
 
-export default Home;
+export default AboutMe;

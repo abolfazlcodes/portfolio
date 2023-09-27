@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Hero from './Hero';
 import { expect } from 'vitest';
+import { CODE_LINK } from '@/constants';
 
 describe('Hero Component Tests', () => {
   it('should render the hero component properly', () => {
@@ -25,9 +26,6 @@ describe('Hero Component Tests', () => {
   });
 
   it('should render the link to github profile page', () => {
-    const code =
-      'const githublink = "https://github.com/abolfazlcodes"';
-
     render(<Hero />);
 
     const githubProfileLinkEl = screen.getByRole('link', {
@@ -35,6 +33,6 @@ describe('Hero Component Tests', () => {
     });
 
     expect(githubProfileLinkEl).toBeInTheDocument();
-    expect(githubProfileLinkEl.textContent).toEqual(code);
+    expect(githubProfileLinkEl.textContent).toEqual(CODE_LINK);
   });
 });

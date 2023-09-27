@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import SingleLineCodeBlock from './SingleLineCodeBlock';
 import Comment from './Comment';
+import { CODE_LINK } from '@/constants';
 
 /* eslint-disable react/jsx-no-comment-textnodes */
 function Hero() {
-  const code =
-    'const githublink = "https://github.com/abolfazlcodes"';
-
   return (
     <header
       data-testid='element-header'
@@ -41,7 +39,7 @@ function Hero() {
           className='text-xl'
         >
           <SingleLineCodeBlock
-            code={code}
+            code={CODE_LINK}
             language='javascript'
           />
         </Link>
