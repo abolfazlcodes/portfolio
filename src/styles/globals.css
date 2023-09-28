@@ -151,12 +151,12 @@ span[class='token']:last-child {
   }
 }
 
-main::before {
+.main::before {
   animation: animateBefore 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
 }
 
-main::after {
+.main::after {
   animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
 }

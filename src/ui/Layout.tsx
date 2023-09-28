@@ -10,7 +10,7 @@ function Layout({ children }: { children?: React.ReactNode }) {
       <Navbar />
       <main
         data-testid='element-layout-main'
-        className='main flex-1'
+        className='flex-1 '
       >
         {children}
       </main>
