@@ -26,6 +26,11 @@ const config: Config = {
       boxShadow: {
         'game-box-shadow':
           '0px 2px 0px 0px rgba(255, 255, 255, 0.3) inset',
+        'game-panel':
+          '1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset',
+        'game-canvas':
+          '1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;',
+        'game-over': '1px 5rem 11px 0px #02121b inset',
       },
       keyframes: {
         titleLoad: {

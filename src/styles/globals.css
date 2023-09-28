@@ -36,6 +36,12 @@ html {
   font-family: 'Fira Code', monospace;
 }
 
+input,
+textarea,
+button {
+  font-family: 'Fira Code', monospace;
+}
+
 body {
   background: #011627;
   color: #607b96;
