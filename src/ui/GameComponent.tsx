@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
-import GameButton from './GameButton';
+import { useEffect, useRef, useState } from 'react';
+// import GameButton from './GameButton';
+import { motion } from 'framer-motion';
 
 const direction = {
   LEFT: 'ArrowLeft',
@@ -349,7 +350,21 @@ function GameComponent() {
   }, [food, snake, drawBoard]);
 
   return (
-    <div className='flex h-3/4 w-2/5 rounded-lg border border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl'>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1,
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 5,
+          stiffness: 100,
+          restDelta: 0.001,
+        },
+      }}
+      className='flex h-3/4 w-2/5 rounded-lg border border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl'
+    >
       {/* game board */}
       <div className='relative z-10 w-full rounded-lg bg-[#011627d6] shadow-game-panel'>
         {/* game-over overlay ==> should become flex to be shown */}
@@ -411,7 +426,7 @@ function GameComponent() {
       </div>
 
       {/* pointer signs */}
-    </div>
+    </motion.div>
   );
 }
 

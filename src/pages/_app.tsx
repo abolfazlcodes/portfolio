@@ -28,23 +28,23 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, []);
 
-  // if (isLoading) {
-  //   return (
-  //     <Layout>
-  //       <Loader />
-  //     </Layout>
-  //   );
-  // } else {
-  return (
-    <AnimatePresence
-      mode='wait'
-      initial={false}
-      onExitComplete={onExitComplete}
-    >
+  if (isLoading) {
+    return (
       <Layout>
-        <Component key={asPath} {...pageProps} />
+        <Loader />
       </Layout>
-    </AnimatePresence>
-  );
-  // }
+    );
+  } else {
+    return (
+      <AnimatePresence
+        mode='wait'
+        initial={false}
+        onExitComplete={onExitComplete}
+      >
+        <Layout>
+          <Component key={asPath} {...pageProps} />
+        </Layout>
+      </AnimatePresence>
+    );
+  }
 }
