@@ -2,6 +2,7 @@ import Link from 'next/link';
 import SingleLineCodeBlock from './SingleLineCodeBlock';
 import Comment from './Comment';
 import { CODE_LINK } from '@/constants';
+import { TypeAnimation } from 'react-type-animation';
 
 /* eslint-disable react/jsx-no-comment-textnodes */
 function Hero() {
@@ -18,13 +19,36 @@ function Hero() {
           data-testid='element-title'
           className='text-4.2 font-normal capitalize leading-[6rem] text-[#E5E9F0]'
         >
-          abolfazl jamshidi
+          <TypeAnimation
+            sequence={[
+              500,
+              'a',
+              1000,
+              'abolfazl jamshidi',
+              500,
+              'abolfazl',
+            ]}
+            speed={10}
+            repeat={Infinity}
+          />
         </h1>
         <p
           data-testid='element-role'
           className='text-4xl font-medium text-[#4D5BCE]'
         >
-          &gt; Front-end developer
+          <TypeAnimation
+            sequence={[
+              500,
+              '>',
+              1000,
+              '> Front-end developer',
+              500,
+              '> Front-end',
+            ]}
+            speed={20}
+            repeat={Infinity}
+          />
+          {/* &gt; Front-end developer */}
         </p>
       </div>
 
