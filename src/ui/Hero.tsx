@@ -45,10 +45,9 @@ function Hero() {
               500,
               '> Front-end',
             ]}
-            speed={20}
+            speed={30}
             repeat={Infinity}
           />
-          {/* &gt; Front-end developer */}
         </p>
       </div>
 

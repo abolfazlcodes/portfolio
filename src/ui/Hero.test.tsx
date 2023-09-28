@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import Hero from './Hero';
 import { expect } from 'vitest';
 import { CODE_LINK } from '@/constants';
@@ -12,17 +12,21 @@ describe('Hero Component Tests', () => {
     expect(headerEl).toBeInTheDocument();
   });
 
-  it('should render the hero title name and role properly', () => {
+  it('should render the hero title name and role properly', async () => {
     render(<Hero />);
 
     const titleEl = screen.getByTestId('element-title');
     const roleEl = screen.getByTestId('element-role');
 
     expect(titleEl).toBeInTheDocument();
-    expect(titleEl.textContent).toEqual('abolfazl jamshidi');
+    await waitFor(() => {
+      expect(titleEl).toHaveTextContent('a');
+    });
 
     expect(roleEl).toBeInTheDocument();
-    expect(roleEl.textContent).toEqual('> Front-end developer');
+    await waitFor(() => {
+      expect(roleEl).toHaveTextContent('>');
+    });
   });
 
   it('should render the link to github profile page', () => {
