@@ -174,3 +174,7 @@ html {
 *::-webkit-scrollbar-thumb:active {
   background-color: #5d7995;
 }
+
+textarea {
+  resize: none;
+}
