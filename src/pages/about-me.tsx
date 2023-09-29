@@ -1,10 +1,19 @@
-import Hero from '@/ui/Hero';
 import dynamic from 'next/dynamic';
+import CommentSnippet from '@/ui/CommentSnippet';
+import Sidebar from '@/ui/Sidebar';
 
-const DynamicPageTransition = dynamic(
-  () => import('../ui/PageTransition'),
+const DynamicCodeBlocksList = dynamic(
+  () => import('../ui/CodeBlocksList'),
   {
-    loading: () => <p>loading ...</p>,
+    loading: () => <p>Loading ...</p>,
+    ssr: true,
+  }
+);
+
+const DynamicPersonalInfoComponent = dynamic(
+  () => import('../ui/PersonalInfo'),
+  {
+    loading: () => <p>Loading ...</p>,
     ssr: true,
   }
 );
@@ -13,11 +22,27 @@ type IndexPageProps = {};
 
 function AboutMe({}: IndexPageProps) {
   return (
-    <DynamicPageTransition>
-      <section className='flex h-full items-center justify-center'>
-        <Hero />
-      </section>
-    </DynamicPageTransition>
+    <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
+      <Sidebar />
+
+      <main className='flex flex-col border-r border-[#1E2D3D] md:col-span-11 xl:col-span-6 xl:flex-row'>
+        <DynamicPersonalInfoComponent />
+
+        <section className='w-full-dvw md:border-t md:border-[#1e2d3d] xl:w-1/2'>
+          <header className='border-b border-[#1E2D3D]'>
+            <div className='flex h-11 w-60 items-center justify-between border-[#1e2d3d]'></div>
+          </header>
+          <div className='h-full px-10 py-6 md:max-h-[83.5dvh] md:overflow-y-scroll'>
+            <CommentSnippet
+              comment={'// Code snippet showcase:'}
+              language='javascript'
+            />
+
+            <DynamicCodeBlocksList />
+          </div>
+        </section>
+      </main>
+    </section>
   );
 }
 

@@ -36,6 +36,12 @@ html {
   font-family: 'Fira Code', monospace;
 }
 
+input,
+textarea,
+button {
+  font-family: 'Fira Code', monospace;
+}
+
 body {
   background: #011627;
   color: #607b96;
@@ -43,23 +49,6 @@ body {
 }
 ::selection {
   background-color: #43d9ad;
-}
-
-pre {
-  background: none !important;
-  border: none !important;
-}
-
-span[class='token']:first-child {
-  color: #4d5bce !important;
-}
-
-code span {
-  color: #43d9ad;
-}
-
-span[class='token']:last-child {
-  color: #e99287 !important;
 }
 
 .main::before,
@@ -145,12 +134,43 @@ span[class='token']:last-child {
   }
 }
 
-main::before {
+.main::before {
   animation: animateBefore 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
 }
 
-main::after {
+.main::after {
   animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715)
     infinite;
+}
+
+/* change scroll design globally */
+/* Firefox */
+html {
+  scrollbar-color: #607b96 #dfe9eb;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 0.2rem;
+  width: 1.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid #1e2d3d;
+  border-top: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0.2rem;
+  background-color: #607b96;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #5d7995;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #5d7995;
 }
