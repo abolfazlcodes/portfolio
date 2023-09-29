@@ -8,10 +8,7 @@ function Layout({ children }: { children?: React.ReactNode }) {
       className={`m-auto flex h-full-dvh max-w-screen-2xl flex-col`}
     >
       <Navbar />
-      <main
-        data-testid='element-layout-main'
-        className='flex-1 '
-      >
+      <main data-testid='element-layout-main' className='flex-1'>
         {children}
       </main>
       <Footer />
