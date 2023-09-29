@@ -25,7 +25,7 @@ describe('Hero Component Tests', () => {
 
     expect(roleEl).toBeInTheDocument();
     await waitFor(() => {
-      expect(roleEl).toHaveTextContent('>');
+      expect(roleEl).toHaveTextContent('> Front');
     });
   });
 
