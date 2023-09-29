@@ -34,6 +34,10 @@ const Wrapper = styled.div`
     color: #e99287 !important;
   }
 
+  code span:nth-child(48) {
+    color: #e99287 !important;
+  }
+
   code span[class='token module'] {
     color: #e99287 !important;
   }
@@ -50,15 +54,19 @@ const Wrapper = styled.div`
 
   code span:nth-child(5),
   code span:nth-child(7),
+  code span:nth-child(33),
+  code span:nth-child(34),
+  code span:nth-child(37),
+  code span:nth-child(38),
   code span:nth-child(49),
-  code span:nth-child(51) {
+  code span:nth-child(51),
+  code span:nth-child(68) {
     color: #5565e8 !important;
   }
   code span[class='token']:nth-child(6) {
     color: #43d9ad !important;
   }
 
-  code span:nth-child(30),
   code span:nth-child(29) {
     color: #c98bdf !important;
   }
