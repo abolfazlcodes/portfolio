@@ -42,7 +42,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div className='hidden items-center gap-3 text-2xl font-medium md:flex'>
+      <div className='hidden h-full items-center gap-3 border-l border-[#1E2D3D] pl-4 text-2xl font-medium md:flex'>
         <span data-testid='element-username-span'>
           @abolfazlcodes
         </span>

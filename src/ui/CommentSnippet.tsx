@@ -1,55 +1,56 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
-SyntaxHighlighter.registerLanguage('js', js);
 import styled from 'styled-components';
+SyntaxHighlighter.registerLanguage('js', js);
 
-interface SingleLineCodeBlockProps {
-  code: string;
+interface CommentSnippetProps {
+  comment: string;
   language: string;
+  showLineNumbers?: boolean;
 }
 
 const Wrapper = styled.div`
   pre {
     background: none !important;
     border: none !important;
+    width: 100%;
+    padding: 0 !important;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+    }
   }
 
-  span[class='token']:first-child {
-    color: #4d5bce !important;
+  span[class='token'] {
+    color: #607b96 !important;
   }
 
   code span {
-    color: #43d9ad;
-  }
-
-  span[class='token']:last-child {
-    color: #e99287 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
   }
 
   font-size: 1.4rem;
   margin-top: 0;
 `;
 
-function SingleLineCodeBlock({
-  code,
+function CommentSnippet({
+  comment,
   language,
-}: SingleLineCodeBlockProps) {
+  showLineNumbers = false,
+}: CommentSnippetProps) {
   return (
     <Wrapper>
       <SyntaxHighlighter
         language={language}
-        customStyle={{
-          padding: '0',
-          marginTop: '0',
-          fontWeight: '500',
-        }}
         style={dracula}
+        showLineNumbers={showLineNumbers}
       >
-        {code}
+        {comment}
       </SyntaxHighlighter>
     </Wrapper>
   );
 }
 
-export default SingleLineCodeBlock;
+export default CommentSnippet;

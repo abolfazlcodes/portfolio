@@ -16,6 +16,9 @@ const config: Config = {
         'full-dvh': '100dvh',
         18: '4.5rem',
       },
+      width: {
+        'full-dvw': '100dvw',
+      },
       screens: {
         md: '640px',
         lg: '950px',
