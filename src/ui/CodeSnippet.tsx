@@ -43,21 +43,23 @@ const Wrapper = styled.div`
   }
 
   code span[class='token']:nth-child(3),
-  span[class='token']:nth-child(26) {
+  code span[class='token']:nth-child(25),
+  code span[class='token']:nth-child(26) {
     color: #e99287 !important;
   }
 
-  code span[class='token']:nth-child(5),
-  span[class='token']:nth-child(7),
-  span[class='token']:nth-child(49),
-  span[class='token']:nth-child(51) {
+  code span:nth-child(5),
+  code span:nth-child(7),
+  code span:nth-child(49),
+  code span:nth-child(51) {
     color: #5565e8 !important;
   }
   code span[class='token']:nth-child(6) {
     color: #43d9ad !important;
   }
 
-  code span[class='token']:nth-child(30) {
+  code span:nth-child(30),
+  code span:nth-child(29) {
     color: #c98bdf !important;
   }
 `;
