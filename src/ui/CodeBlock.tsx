@@ -2,7 +2,7 @@ import CodeBlockHeader from './CodeBlockHeader';
 import CodeBlockDescription from './CodeBlockDescription';
 import CodeSnippet from './CodeSnippet';
 
-function CodeBlock() {
+function CodeBlock({ code }: { code?: string }) {
   const codeSnippetOne = `
     function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
     const value: T = parseModel(chunk._response, chunk._value);
@@ -16,7 +16,7 @@ function CodeBlock() {
   return (
     <article className='my-6'>
       <CodeBlockHeader />
-      <CodeSnippet code={codeSnippetOne} />
+      <CodeSnippet code={code || codeSnippetOne} />
       <CodeBlockDescription />
     </article>
   );
