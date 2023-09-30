@@ -6,3 +6,8 @@ export const navigationLinks = [
 
 export const CODE_LINK =
   'const githublink = "https://github.com/abolfazlcodes"';
+
+export const aboutMeTabs = [
+  { id: 1, name: 'personal_info' },
+  { id: 2, name: 'professional_info' },
+];

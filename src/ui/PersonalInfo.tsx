@@ -24,7 +24,7 @@ function PersonalInfo() {
       <header className='border-b border-[#1E2D3D]'>
         <div className='flex h-11 w-60 items-center justify-between border-r border-[#1e2d3d] px-4 py-2'>
           <span className='text-xl'>personal-info</span>
-          <span className='text-xl'>&times;</span>
+          <span className='text-3xl'>&times;</span>
         </div>
       </header>
       <div className='h-full px-8 md:max-h-[83.5dvh] md:overflow-y-scroll md:px-10'>
