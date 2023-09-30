@@ -99,6 +99,10 @@ jobs:
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          GOOGLE_ANALYTICS: ${{ process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS }}
+          NODEMAILER_PASS: ${{ process.env.NEXT_PUBLIC_NODEMAILER_PASS }}
+          NODEMAILER_EMAIL: ${{ process.env.NEXT_PUBLIC_NODEMAILER_EMAIL }}
+          BASE_URL: ${{ process.env.NEXT_PUBLIC_BASE_URL }}
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
