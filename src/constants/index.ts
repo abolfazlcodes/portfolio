@@ -9,5 +9,5 @@ export const CODE_LINK =
 
 export const aboutMeTabs = [
   { id: 1, name: 'personal_info' },
-  { id: 1, name: 'professional_info' },
+  { id: 2, name: 'professional_info' },
 ];

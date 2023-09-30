@@ -2,7 +2,9 @@ import { EmailIcon, PhoneIcon } from '@/utils/iconsHelper';
 
 function SidebarContacts() {
   return (
-    <article className='hidden w-full border-x border-[#1E2D3D] px-1 xl:block'>
+    <article
+      className={`hidden w-full border-x border-[#1E2D3D] px-1 xl:block`}
+    >
       <header className='border-b border-[#1E2D3D] px-7 py-2'>
         <h1 className='text-lg text-[#fff]'>contacts</h1>
       </header>

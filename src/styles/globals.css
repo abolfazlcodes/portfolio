@@ -75,7 +75,6 @@ body {
   border-radius: 50%;
   width: 400px;
   height: 400px;
-  border: 1px solid red;
   filter: blur(90px);
   top: calc(50vh - 40vw / 2);
   left: calc(50vw - 1vw / 2);
