@@ -9,6 +9,12 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 type InputEvent = HTMLInputElement | HTMLTextAreaElement;
 
 function Contact() {
+  const date = new Date().toLocaleDateString('en-US', {
+    month: 'short',
+    year: 'numeric',
+    day: '2-digit',
+  });
+
   const [contactForm, setContactForm] = useState<{
     name: string;
     email: string;
@@ -18,11 +24,7 @@ function Contact() {
     name: '',
     email: '',
     message: '',
-    date: new Date().toLocaleDateString('en-US', {
-      month: 'short',
-      year: 'numeric',
-      day: '2-digit',
-    }),
+    date,
   });
 
   const handleContactChange = (e: ChangeEvent<InputEvent>) => {
@@ -36,7 +38,28 @@ function Contact() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     // TODO: handle contact form submission
+    fetch('/api/contacts', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(contactForm),
+    })
+      .then((res) => {
+        setContactForm({
+          name: '',
+          email: '',
+          message: '',
+          date,
+        });
+        console.log(res, 'response');
+      })
+      .catch((err) => {
+        console.log(err, 'error sending');
+      });
   };
 
   return (
@@ -62,6 +85,7 @@ function Contact() {
                 id='name'
                 name='name'
                 placeholder='Your Name'
+                value={contactForm.name}
               />
             </FormCol>
             <FormCol htmlFor='email' label='email'>
@@ -70,6 +94,7 @@ function Contact() {
                 id='email'
                 name='email'
                 placeholder='your@email.com'
+                value={contactForm.email}
               />
             </FormCol>
             <FormCol htmlFor='message' label='message'>
@@ -78,6 +103,7 @@ function Contact() {
                 id='message'
                 name='message'
                 placeholder='Your message'
+                value={contactForm.message}
               />
             </FormCol>
 
