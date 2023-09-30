@@ -14,7 +14,7 @@ export default defineConfig({
       include: ['src/**/*'],
       reporter: ['text', 'json', 'html'],
       perFile: true,
-      // all: true,
+      all: true,
       lines: 65,
       branches: 70,
       functions: 60,
