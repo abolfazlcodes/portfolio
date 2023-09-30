@@ -34,6 +34,8 @@ const config: Config = {
         'game-canvas':
           '1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;',
         'game-over': '1px 5rem 11px 0px #02121b inset',
+        'input-shadow':
+          '0px 0px 0px 2px rgba(96, 123, 150, 0.30);',
       },
       keyframes: {
         titleLoad: {
