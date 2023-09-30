@@ -25,21 +25,18 @@ const Wrapper = styled.div`
     color: #5565e8 !important;
   }
 
-  span[class='token arrow'] {
-    color: #c98bdf !important;
-  }
-
-  span[class='token']:nth-child(11),
-  span[class='token']:nth-child(26),
-  span[class='token']:nth-child(33),
-  span[class='token']:nth-child(40),
-  span[class='token']:nth-child(47),
-  span[class='token']:nth-child(56) {
+  span[class='token']:nth-child(10),
+  span[class='token']:nth-child(25),
+  span[class='token']:nth-child(32),
+  span[class='token']:nth-child(39),
+  span[class='token']:nth-child(46),
+  span[class='token']:nth-child(55) {
     color: #fea55f !important;
   }
 
   span[class='token']:nth-child(3),
-  span[class='token']:nth-child(16) {
+  span[class='token']:nth-child(15),
+  span[class='token']:nth-child(61) {
     color: #c98bdf !important;
   }
 `;
