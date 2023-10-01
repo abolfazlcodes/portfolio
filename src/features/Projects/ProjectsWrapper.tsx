@@ -13,21 +13,21 @@ const projectsFakeData = [
     id: 1,
     title: '_hotel-dashboard',
     description:
-      'Duis aute irure dolor in velit esse cillum dolore.',
+      'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is a hotel admin dashboard that hotel employees can manage and filter the bookings, cabins and so on. Take a look at the demo',
     link: 'https://wildoasis-abolfazl.vercel.app/',
   },
   {
     id: 2,
     title: '_car-rent-platform',
     description:
-      'Duis aute irure dolor in velit esse cillum dolore.',
+      'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is modern platform for renting different types of cars and make the the modern world of transportation more convenient. Take a look at the demo',
     link: 'https://morent-three.vercel.app/',
   },
   {
     id: 3,
     title: '_hotel-dashboard',
     description:
-      'Duis aute irure dolor in velit esse cillum dolore.',
+      'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is a hotel admin dashboard that hotel employees can manage and filter the bookings, cabins and so on. Take a look at the demo',
     link: 'https://wildoasis-abolfazl.vercel.app/',
   },
 ];
@@ -45,9 +45,12 @@ function ProjectsWrapper() {
         </header>
 
         <div className='flex h-full flex-col items-center justify-center gap-8 py-20 sm:p-10 lg:flex-row'>
-          <DynamicProjectsCard card={projectsFakeData[0]} />
-          <DynamicProjectsCard card={projectsFakeData[1]} />
-          <DynamicProjectsCard card={projectsFakeData[2]} />
+          {projectsFakeData.map((project) => (
+            <DynamicProjectsCard
+              key={project.id}
+              card={project}
+            />
+          ))}
         </div>
       </main>
     </>

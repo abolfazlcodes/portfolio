@@ -33,7 +33,7 @@ function ProjectCard({ card }: ProjectCardProps) {
 
   /* eslint-disable react/jsx-no-comment-textnodes */
   return (
-    <article className='flex max-h-[40rem] min-h-[33rem] w-full  max-w-[40rem] cursor-pointer flex-col gap-6 duration-200 hover:-translate-y-3'>
+    <article className='flex h-[45rem] max-h-[45rem] w-[30rem] cursor-pointer flex-col gap-6 duration-200 hover:-translate-y-3'>
       <header className='flex flex-col gap-3 sm:flex-row sm:items-center'>
         <h1 className='text-2xl font-bold capitalize text-[#5565E8]'>
           Project {id}
