@@ -15,9 +15,11 @@ const config: Config = {
       height: {
         'full-dvh': '100dvh',
         18: '4.5rem',
+        106: '26rem',
       },
       width: {
         'full-dvw': '100dvw',
+        112: '30rem',
       },
       screens: {
         md: '640px',
