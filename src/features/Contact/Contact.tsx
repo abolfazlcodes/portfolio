@@ -40,10 +40,9 @@ function Contact() {
     e.preventDefault();
 
     // TODO: handle contact form submission
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contacts`, {
+    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
       method: 'POST',
       headers: {
-        Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(contactForm),
