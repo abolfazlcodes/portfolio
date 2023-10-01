@@ -40,7 +40,7 @@ function Contact() {
     e.preventDefault();
 
     // TODO: handle contact form submission
-    fetch(`/api/contacts`, {
+    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contacts`, {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
