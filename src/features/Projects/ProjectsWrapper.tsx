@@ -14,18 +14,21 @@ const projectsFakeData = [
     title: '_hotel-dashboard',
     description:
       'Duis aute irure dolor in velit esse cillum dolore.',
+    link: 'https://wildoasis-abolfazl.vercel.app/',
   },
   {
     id: 2,
     title: '_car-rent-platform',
     description:
       'Duis aute irure dolor in velit esse cillum dolore.',
+    link: 'https://morent-three.vercel.app/',
   },
   {
     id: 3,
     title: '_hotel-dashboard',
     description:
       'Duis aute irure dolor in velit esse cillum dolore.',
+    link: 'https://wildoasis-abolfazl.vercel.app/',
   },
 ];
 

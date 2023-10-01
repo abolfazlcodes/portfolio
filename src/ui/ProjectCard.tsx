@@ -6,11 +6,12 @@ interface ProjectCardProps {
     title: string;
     id: number;
     description: string;
+    link: string;
   };
 }
 
 function ProjectCard({ card }: ProjectCardProps) {
-  const { title, id, description } = card;
+  const { title, id, description, link } = card;
   const [shouldPlay, setShouldPlay] = useState(false);
 
   const mouseEnterHandler = (
@@ -54,7 +55,7 @@ function ProjectCard({ card }: ProjectCardProps) {
         </div>
         <div className='flex flex-col gap-8 p-6'>
           <p className='text-xl text-[#607b96]'>{description}</p>
-          <Button>view-project</Button>
+          <Button link={link}>view-project</Button>
         </div>
       </div>
     </article>
