@@ -37,14 +37,14 @@ function ProjectsWrapper() {
     <>
       <aside className='border-r border-[#1e2d3d]'>filter</aside>
 
-      <main className='flex flex-col border-r border-[#1E2D3D] md:col-span-11 xl:col-span-6'>
+      <main className='flex h-full flex-col border-r border-[#1E2D3D] md:col-span-11 xl:col-span-6'>
         <header className='border-b border-r border-[#1e2d3d]'>
           <div className='flex h-11 w-max items-center justify-between gap-3 border-r border-[#1e2d3d] px-8'>
             <span>react</span>;<span>vue</span>
           </div>
         </header>
 
-        <div className='flex h-full flex-wrap items-center justify-center gap-8 p-10'>
+        <div className='flex h-full flex-col items-center justify-center gap-8 py-20 sm:p-10 lg:flex-row'>
           <DynamicProjectsCard card={projectsFakeData[0]} />
           <DynamicProjectsCard card={projectsFakeData[1]} />
           <DynamicProjectsCard card={projectsFakeData[2]} />

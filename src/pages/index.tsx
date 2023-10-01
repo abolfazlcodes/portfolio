@@ -17,7 +17,7 @@ type IndexPageProps = {};
 
 function Home({}: IndexPageProps) {
   return (
-    <section className='main flex h-full items-center justify-center'>
+    <section className='main flex h-full flex-col items-center justify-center lg:flex-row'>
       <DynamicHero />
       <DynamicSnakeGame />
     </section>
