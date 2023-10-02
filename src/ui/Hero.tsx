@@ -21,11 +21,11 @@ function Hero() {
           restDelta: 0.001,
         },
       }}
-      className='h-2/3 w-1/3 scale-50 opacity-0'
+      className='flex h-2/3 w-full scale-50 items-center justify-center opacity-0 lg:w-1/3'
     >
       <section
         data-testid='element-header'
-        className='flex h-full w-full flex-col justify-evenly'
+        className='m-auto flex h-full w-max flex-col justify-evenly lg:w-full'
       >
         <div>
           <p className='text-xl font-medium text-[#E5E9F0]'>

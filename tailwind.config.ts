@@ -15,9 +15,11 @@ const config: Config = {
       height: {
         'full-dvh': '100dvh',
         18: '4.5rem',
+        106: '26rem',
       },
       width: {
         'full-dvw': '100dvw',
+        112: '30rem',
       },
       screens: {
         md: '640px',
@@ -69,6 +71,9 @@ const config: Config = {
         'fadeIn-title': 'fadeIn 2s 1.6s forwards',
         'fadeIn-role': 'secFadeIn 2s 3.2s forwards',
         'fadeout-loader': 'fadeLoader 2s 5s forwards',
+      },
+      flex: {
+        '2': '2 2 0%',
       },
     },
   },

@@ -177,3 +177,28 @@ html {
 textarea {
   resize: none;
 }
+
+input[type='checkbox'] {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #607b96;
+  border: 1px solid #607b96;
+  position: relative;
+}
+
+/* Change the background color for unchecked checkboxes */
+input[type='checkbox']:not(:checked)::before {
+  content: '';
+  position: absolute;
+  background-color: #011627;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #607b96;
+}
