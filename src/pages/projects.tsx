@@ -10,7 +10,7 @@ const DynamicProjectsWrapper = dynamic(
 
 function projects() {
   return (
-    <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
+    <section className='flex h-full w-full flex-col bg-[#011627] md:flex-row'>
       <DynamicProjectsWrapper />
     </section>
   );

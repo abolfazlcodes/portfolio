@@ -72,6 +72,9 @@ const config: Config = {
         'fadeIn-role': 'secFadeIn 2s 3.2s forwards',
         'fadeout-loader': 'fadeLoader 2s 5s forwards',
       },
+      flex: {
+        '2': '2 2 0%',
+      },
     },
   },
   plugins: [],
