@@ -177,3 +177,15 @@ html {
 textarea {
   resize: none;
 }
+
+input[type='checkbox'] {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 1rem;
+  accent-color: #607b96;
+}
