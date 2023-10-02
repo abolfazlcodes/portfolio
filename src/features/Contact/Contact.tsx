@@ -43,7 +43,7 @@ function Contact() {
     fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain',
       },
       body: JSON.stringify(contactForm),
     })
