@@ -13,7 +13,6 @@ export async function emailCreator({
       user: process.env.NEXT_PUBLIC_NODEMAILER_EMAIL,
       pass: process.env.NEXT_PUBLIC_NODEMAILER_PASS,
     },
-    secure: true,
   });
 
   const mailData = {
