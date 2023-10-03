@@ -1,4 +1,7 @@
+import SnakeGame from '@/features/SnakeGame';
+import { store } from '@/store/Store';
 import dynamic from 'next/dynamic';
+import { Provider } from 'react-redux';
 
 const DynamicHero = dynamic(() => import('../ui/Hero'), {
   loading: () => <p>loading ...</p>,
@@ -19,7 +22,10 @@ function Home({}: IndexPageProps) {
   return (
     <section className='main flex h-full flex-col items-center justify-center lg:flex-row'>
       <DynamicHero />
-      <DynamicSnakeGame />
+      <Provider store={store}>
+        {/* <DynamicSnakeGame /> */}
+        <SnakeGame />
+      </Provider>
     </section>
   );
 }
