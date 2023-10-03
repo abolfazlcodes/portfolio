@@ -1,11 +1,23 @@
-import { AppDispatch } from '@/interface/Store.types';
-import { togglePause } from '@/store/SnakeSlice';
-import { useDispatch } from 'react-redux';
+import { AppDispatch, RootState } from '@/interface/Store.types';
+import { resetGame, togglePause } from '@/store/SnakeSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import GameButton from './GameButton';
+import { GameState } from '@/interface/Square.types';
 
 /* eslint-disable react/jsx-no-comment-textnodes */
 function GamePanel() {
+  const { gameState } = useSelector(
+    (state: RootState) => state.snake
+  );
   const dispatch: AppDispatch = useDispatch();
+
+  const handlePauseGameOver = () => {
+    if (gameState === GameState.InProgress) {
+      dispatch(togglePause());
+    } else if (gameState === GameState.Paused) {
+      dispatch(togglePause());
+    }
+  };
 
   return (
     <div className='z-10 flex w-full flex-col justify-between gap-4 rounded-lg px-4'>
@@ -31,10 +43,12 @@ function GamePanel() {
       </div>
       <div className='m-auto flex w-full items-center justify-end gap-4'>
         <button
-          onClick={() => dispatch(togglePause())}
+          onClick={handlePauseGameOver}
           className='inline-flex cursor-pointer items-center justify-center gap-4 rounded-lg border border-[#fff] bg-none px-6 py-5 text-xl text-[#fff]'
         >
-          pause
+          {gameState === GameState.InProgress
+            ? 'pause'
+            : 'resume'}
         </button>
       </div>
     </div>
