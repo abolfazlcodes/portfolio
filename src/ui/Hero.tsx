@@ -21,7 +21,7 @@ function Hero() {
           restDelta: 0.001,
         },
       }}
-      className='flex h-2/3 w-full scale-50 items-center justify-center opacity-0 lg:w-1/3'
+      className='flex h-2/3 w-full scale-50 items-center justify-center opacity-0 lg:w-2/3'
     >
       <section
         data-testid='element-header'

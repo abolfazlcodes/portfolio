@@ -1,5 +1,5 @@
 import { AppDispatch, RootState } from '@/interface/Store.types';
-import { resetGame, togglePause } from '@/store/SnakeSlice';
+import { togglePause } from '@/store/SnakeSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import GameButton from './GameButton';
 import { GameState } from '@/interface/Square.types';
