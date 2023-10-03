@@ -1,0 +1,46 @@
+/* @import "../../styles/variables.css"; */
+
+.square {
+  height: 7.4;
+  width: 7.8;
+  background-color: #011627d6;
+}
+
+.square[data-value='food'] {
+  border-radius: 50%;
+  background-color: var(--square-food);
+  animation: hearbeat 1.5s linear infinite;
+}
+
+@keyframes hearbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.square[data-value='ArrowDown'] {
+  background-color: var(--square-snake);
+  border-radius: 0 0 50% 50%;
+}
+.square[data-value='ArrowUp'] {
+  background-color: var(--square-snake);
+  border-radius: 50% 50% 0 0;
+}
+
+.square[data-value='ArrowRight'] {
+  background-color: var(--square-snake);
+  border-radius: 0 50% 50% 0;
+}
+
+.square[data-value='ArrowLeft'] {
+  background-color: var(--square-snake);
+  border-radius: 50% 0 0 50%;
+}
+
+.square[data-value='snake-body'] {
+  background-color: var(--square-snake);
+}
