@@ -8,9 +8,8 @@ import { FC } from 'react';
 import Square from './Square';
 import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
-import { store } from '@/store/Store';
 import { resetGame, togglePause } from '@/store/SnakeSlice';
-import { RootState } from '@/interface/Store.types';
+import { AppDispatch, RootState } from '@/interface/Store.types';
 
 function calculateConsistentOpacityColor(index: number) {
   index = Math.min(Math.max(index, 0), 99);
@@ -30,7 +29,7 @@ const Board: FC<BoardProps> = ({ food, snake, direction }) => {
   const { snake: snakeState } = useSelector(
     (state: RootState) => state
   );
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const handlePauseGameOver = () => {
     if (snakeState?.gameState === GameState.GameOver) {
