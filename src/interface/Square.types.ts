@@ -17,7 +17,7 @@ export interface SquareProps {
   backgroundColor: string;
 }
 
-export interface BoardProps {
+export interface GameProps {
   food: number;
   snake: number[];
   direction: Direction;

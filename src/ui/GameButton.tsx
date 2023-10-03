@@ -1,3 +1,8 @@
+import { Direction } from '@/interface/Square.types';
+import { AppDispatch } from '@/interface/Store.types';
+import { setDirection } from '@/store/SnakeSlice';
+import { useDispatch } from 'react-redux';
+
 function GameButton({
   position,
   direction,
@@ -5,8 +10,20 @@ function GameButton({
   position: string;
   direction: string;
 }) {
+  const dispatch: AppDispatch = useDispatch();
+
+  const directionToDispatch: Direction =
+    direction === 'up'
+      ? 'ArrowUp'
+      : direction === 'left'
+      ? 'ArrowLeft'
+      : direction === 'right'
+      ? 'ArrowRight'
+      : 'ArrowDown';
+
   return (
     <button
+      onClick={() => dispatch(setDirection(directionToDispatch))}
       className={`w-18 inline-flex h-12 cursor-pointer items-center justify-center rounded-lg bg-[#010c15] text-[#fff] ${position}`}
     >
       {direction === 'up' && (
