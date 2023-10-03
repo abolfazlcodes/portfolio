@@ -7,11 +7,12 @@ interface ProjectCardProps {
     id: number;
     description: string;
     link: string;
+    video: string;
   };
 }
 
 function ProjectCard({ card }: ProjectCardProps) {
-  const { title, id, description, link } = card;
+  const { title, id, description, link, video } = card;
   const [shouldPlay, setShouldPlay] = useState(false);
 
   const mouseEnterHandler = (
@@ -28,9 +29,6 @@ function ProjectCard({ card }: ProjectCardProps) {
     if (shouldPlay) e.currentTarget.pause();
     setShouldPlay(false);
   };
-
-  const video =
-    id % 2 === 0 ? '../../public/morent.mp4' : '../../hotel.mp4';
 
   /* eslint-disable react/jsx-no-comment-textnodes */
   return (

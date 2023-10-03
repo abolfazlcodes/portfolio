@@ -9,7 +9,14 @@ const nextConfig = {
   eslint: {
     // dirs: ["pages", "ui"], // ? for production linting
   },
-  // distDir: 'dist',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

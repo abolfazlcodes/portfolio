@@ -14,7 +14,7 @@ function CodeBlockHeader({
     <header className='mb-6 flex items-center justify-between'>
       <div className='flex items-center gap-4'>
         <Image
-          src='/me.jpg'
+          src='https://imageupload.io/oGdCBqkZ8yyiCJK'
           alt='user'
           width={40}
           height={40}
