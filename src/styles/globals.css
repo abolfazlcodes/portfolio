@@ -7,6 +7,17 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --header-height: 70px;
+  --footer-height: 50px;
+  --body-margin: var(--header-height) 0 var(--footer-height);
+  --square-size: 50px;
+  --square-background: #fff;
+  --square-snake: #43d9ad;
+  --square-food: #43d9ad;
+
+  --board-width: calc(var(--square-size) * var(--n-rows));
+  --board-height: calc(var(--square-size) * var(--n-cols));
+
   --secondary-glow: conic-gradient(
     from 10deg at 50% 50%,
     #43d9ad 0deg,

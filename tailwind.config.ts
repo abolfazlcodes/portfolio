@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        '38': 'repeat(38, minmax(0, 1fr))',
+      },
+      gridTemplateColumns: {
+        '20': 'repeat(20, minmax(0, 1fr))',
+      },
       backgroundImage: {
         'game-board':
           'linear-gradient(150deg, rgba(23, 85, 83, 0.7), rgba(67, 217, 173, 0.09))',
