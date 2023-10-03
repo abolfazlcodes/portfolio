@@ -7,7 +7,7 @@
 }
 
 .square[data-value='food'] {
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: var(--square-food);
   animation: hearbeat 1.5s linear infinite;
 }

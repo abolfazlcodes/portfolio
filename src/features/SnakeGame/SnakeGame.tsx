@@ -8,7 +8,6 @@ import {
   AppDispatch,
   RootState,
 } from '@/interface/Store.types';
-import Board from '@/ui/SnakeGameComponents/Board';
 import { connect } from 'react-redux';
 import {
   resetGame,
@@ -16,26 +15,22 @@ import {
   togglePause,
   updateBoard,
 } from '@/store/SnakeSlice';
+import GameComponent from '@/ui/GameComponent';
 
 export type AppProps = GameStatusProps &
   StoreType & {
     moveSnake: () => void;
+    // eslint-disable-next-line no-unused-vars
     changeDirection: (dir: Direction) => void;
   };
 
 function SnakeGame({
   speed,
-  score,
   moveSnake,
-  onReset,
   onTogglePause,
   changeDirection,
   ...boardProps
 }: AppProps) {
-  useEffect(() => {
-    document.title = 'snake game';
-  }, []);
-
   useEffect(() => {
     const interval = setInterval(moveSnake, speed);
     return () => clearInterval(interval);
@@ -63,13 +58,7 @@ function SnakeGame({
 
   return (
     <>
-      {/* <GameStatus
-          score={score}
-          gameState={boardProps.gameState}
-          onReset={onReset}
-          onTogglePause={onTogglePause}
-        /> */}
-      <Board {...boardProps} />
+      <GameComponent {...boardProps} />
     </>
   );
 }
