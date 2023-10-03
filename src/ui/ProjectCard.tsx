@@ -29,7 +29,8 @@ function ProjectCard({ card }: ProjectCardProps) {
     setShouldPlay(false);
   };
 
-  const video = id % 2 === 0 ? '/morent.mp4' : '/hotel.mp4';
+  const video =
+    id % 2 === 0 ? '../../public/morent.mp4' : '../../hotel.mp4';
 
   /* eslint-disable react/jsx-no-comment-textnodes */
   return (

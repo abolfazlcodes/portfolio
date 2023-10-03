@@ -1,8 +1,11 @@
 import CodeBlockHeader from './CodeBlockHeader';
 import CodeBlockDescription from './CodeBlockDescription';
 import CodeSnippet from './CodeSnippet';
+import { useState } from 'react';
 
 function CodeBlock({ code }: { code?: string }) {
+  const [showDescription, setShowDescription] = useState(false);
+
   const codeSnippetOne = `
     function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
     const value: T = parseModel(chunk._response, chunk._value);
@@ -15,9 +18,9 @@ function CodeBlock({ code }: { code?: string }) {
 
   return (
     <article className='my-6'>
-      <CodeBlockHeader />
+      <CodeBlockHeader onDetails={setShowDescription} />
       <CodeSnippet code={code || codeSnippetOne} />
-      <CodeBlockDescription />
+      {showDescription && <CodeBlockDescription />}
     </article>
   );
 }

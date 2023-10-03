@@ -107,13 +107,7 @@ function Contact() {
             </FormCol>
 
             <div className='flex w-full flex-col items-start sm:w-1/2'>
-              <Button
-                onClick={() => {
-                  // TODO: add form submission functionality
-                }}
-              >
-                submit-message
-              </Button>
+              <Button>submit-message</Button>
             </div>
           </form>
         </div>
