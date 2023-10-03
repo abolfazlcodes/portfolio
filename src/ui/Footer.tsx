@@ -16,30 +16,30 @@ function Footer() {
           data-testid='element-footer-list'
           className='flex items-center justify-end'
         >
-          <li className='cursor-pointer border-x border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
-            <Link
-              href='https://github.com/abolfazlcodes'
-              target='_blank'
-            >
+          <Link
+            href='https://github.com/abolfazlcodes'
+            target='_blank'
+          >
+            <li className='cursor-pointer border-x border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
               <LuGithub />
-            </Link>
-          </li>
-          <li className='cursor-pointer border-r border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
-            <Link
-              href='https://twitter.com/abolfazlcodes'
-              target='_blank'
-            >
+            </li>
+          </Link>
+          <Link
+            href='https://twitter.com/abolfazlcodes'
+            target='_blank'
+          >
+            <li className='cursor-pointer border-r border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
               <LuTwitter />
-            </Link>
-          </li>
-          <li className='cursor-pointer border-r border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
-            <Link
-              href='https://abolfazlcodes.medium.com/'
-              target='_blank'
-            >
+            </li>
+          </Link>
+          <Link
+            href='https://abolfazlcodes.medium.com/'
+            target='_blank'
+          >
+            <li className='cursor-pointer border-r border-[#1E2D3D] p-6 text-2xl font-medium duration-200 hover:text-[#FFF]'>
               <BsMedium />
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className='hidden h-full items-center gap-3 border-l border-[#1E2D3D] pl-4 text-2xl font-medium md:flex'>
