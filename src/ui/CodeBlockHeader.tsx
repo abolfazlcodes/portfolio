@@ -3,8 +3,13 @@ import {
   StarFilledIcon,
 } from '@/utils/iconsHelper';
 import Image from 'next/image';
+import { Dispatch, SetStateAction } from 'react';
 
-function CodeBlockHeader() {
+function CodeBlockHeader({
+  onDetails,
+}: {
+  onDetails: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
     <header className='mb-6 flex items-center justify-between'>
       <div className='flex items-center gap-4'>
@@ -25,7 +30,10 @@ function CodeBlockHeader() {
         </div>
       </div>
       <div className='flex items-center gap-8'>
-        <button className='flex items-center gap-2'>
+        <button
+          className='flex items-center gap-2'
+          onClick={() => onDetails((prevState) => !prevState)}
+        >
           <DetailsIcon />
           <span className='text-base text-[#fff] sm:text-lg'>
             details
