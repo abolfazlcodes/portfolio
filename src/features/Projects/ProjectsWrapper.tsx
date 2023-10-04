@@ -34,7 +34,6 @@ const projectsFilterList = [
 
 function ProjectsWrapper() {
   const [filters, setFilters] = useState<string[]>([]);
-
   const [filteredData, setFilteredData] =
     useState<ProjectProps[]>(projectsFakeData);
 
@@ -67,7 +66,7 @@ function ProjectsWrapper() {
 
   useEffect(() => {
     getFilteredData(projectsFakeData);
-  }, [filters, projectsFakeData]);
+  }, [filters]);
 
   return (
     <>
