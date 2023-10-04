@@ -36,16 +36,20 @@ function Contact() {
     setContactForm(updatedContactForm);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // TODO: handle contact form submission
     fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain',
       },
-      body: JSON.stringify(contactForm),
+      body: JSON.stringify({
+        name: contactForm.name,
+        email: contactForm.email,
+        message: contactForm.message,
+        date: contactForm.date,
+      }),
     })
       .then((res) => {
         setContactForm({

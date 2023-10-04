@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { useState } from 'react';
 import CommentSnippet from '@/ui/CommentSnippet';
 import Sidebar from '@/ui/Sidebar';
 
@@ -18,15 +19,30 @@ const DynamicPersonalInfoComponent = dynamic(
   }
 );
 
-type IndexPageProps = {};
+const DynamicProfessionalInfoComponent = dynamic(
+  () => import('../ui/ProfessionalInfo'),
+  {
+    loading: () => <p>Loading ...</p>,
+    ssr: true,
+  }
+);
 
-function AboutMe({}: IndexPageProps) {
+type AboutMeTap = 'personal' | 'professional';
+
+function AboutMe() {
+  const [aboutMeTab, setAboutMeTab] =
+    useState<AboutMeTap>('personal');
+
   return (
     <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
-      <Sidebar />
+      <Sidebar setAboutMeTabs={setAboutMeTab} />
 
       <main className='flex flex-col border-r border-[#1E2D3D] md:col-span-11 xl:col-span-6 xl:flex-row'>
-        <DynamicPersonalInfoComponent />
+        {aboutMeTab === 'personal' ? (
+          <DynamicPersonalInfoComponent />
+        ) : (
+          <DynamicProfessionalInfoComponent />
+        )}
 
         <section className='w-full-dvw md:border-t md:border-[#1e2d3d] xl:w-1/2'>
           <header className='border-b border-[#1E2D3D]'>

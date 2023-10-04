@@ -3,15 +3,16 @@ import { useState, MouseEvent } from 'react';
 
 interface ProjectCardProps {
   card: {
-    title: string;
     id: number;
+    title: string;
     description: string;
     link: string;
+    video: string;
   };
 }
 
 function ProjectCard({ card }: ProjectCardProps) {
-  const { title, id, description, link } = card;
+  const { title, id, description, link, video } = card;
   const [shouldPlay, setShouldPlay] = useState(false);
 
   const mouseEnterHandler = (
@@ -29,9 +30,6 @@ function ProjectCard({ card }: ProjectCardProps) {
     setShouldPlay(false);
   };
 
-  const video =
-    id % 2 === 0 ? '../../public/morent.mp4' : '../../hotel.mp4';
-
   /* eslint-disable react/jsx-no-comment-textnodes */
   return (
     <article className='flex h-[45rem] max-w-[30rem] cursor-pointer flex-col gap-6 duration-200 hover:-translate-y-3'>
@@ -43,7 +41,7 @@ function ProjectCard({ card }: ProjectCardProps) {
           // {title}
         </span>
       </header>
-      <div className='flex h-full w-full flex-col overflow-hidden rounded-3xl border border-[#1E2D3D]'>
+      <div className='flex h-full w-full flex-col justify-between overflow-hidden rounded-3xl border border-[#1E2D3D]'>
         <div className='h-full w-full'>
           <video
             src={video}
@@ -53,7 +51,7 @@ function ProjectCard({ card }: ProjectCardProps) {
             onMouseLeave={(e) => mouseLeaveHandler(e)}
           />
         </div>
-        <div className='flex flex-col gap-8 p-6'>
+        <div className='flex h-full w-full flex-1 flex-col gap-8 p-6'>
           <p className='text-xl text-[#607b96]'>{description}</p>
           <Button link={link}>view-project</Button>
         </div>
