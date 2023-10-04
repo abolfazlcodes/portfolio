@@ -9,7 +9,6 @@ const nextConfig = {
   eslint: {
     // dirs: ["pages", "ui"], // ? for production linting
   },
-  // distDir: 'dist',
 };
 
 module.exports = nextConfig;

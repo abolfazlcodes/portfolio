@@ -22,12 +22,15 @@ function GamePanel() {
   return (
     <div className='z-10 flex w-full flex-col justify-between gap-4 rounded-lg px-4'>
       <div className='m-auto flex h-max w-full flex-col justify-center gap-6 rounded-lg p-4'>
-        <div className='gameKeys--des'>
+        <div className='mb-4'>
           <p className='text-2xl font-normal leading-10 text-[#fff]'>
             // use keyboard
           </p>
           <p className='text-2xl font-normal leading-10 text-[#fff]'>
             // arrows to play
+          </p>
+          <p className='text-2xl font-normal leading-10 text-[#fff]'>
+            // press space to pause
           </p>
         </div>
         <div className='m-auto grid w-max grid-cols-3 grid-rows-2 gap-2'>

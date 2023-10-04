@@ -4,6 +4,7 @@ import {
 } from '@/utils/iconsHelper';
 import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
+import image from '../../public/me.jpg';
 
 function CodeBlockHeader({
   onDetails,
@@ -14,7 +15,7 @@ function CodeBlockHeader({
     <header className='mb-6 flex items-center justify-between'>
       <div className='flex items-center gap-4'>
         <Image
-          src='/me.jpg'
+          src={image}
           alt='user'
           width={40}
           height={40}
