@@ -20,7 +20,7 @@ export const projectsFakeData = [
       'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is a hotel admin dashboard that hotel employees can manage and filter the bookings, cabins and so on. Take a look at the demo',
     link: 'https://wildoasis-abolfazl.vercel.app/',
     tag: 'react',
-    video: 'https://screenpal.com/watch/c06eDcV5Oc8',
+    video: '/hotel.mp4',
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const projectsFakeData = [
       'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is modern platform for renting different types of cars and make the the modern world of transportation more convenient. Take a look at the demo',
     link: 'https://morent-three.vercel.app/',
     tag: 'css',
-    video: 'https://screenpal.com/watch/c06eDVV5OVl',
+    video: '/morent.mp4',
   },
   {
     id: 3,
@@ -38,6 +38,6 @@ export const projectsFakeData = [
       'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is a hotel admin dashboard that hotel employees can manage and filter the bookings, cabins and so on. Take a look at the demo',
     link: 'https://wildoasis-abolfazl.vercel.app/',
     tag: 'next',
-    video: 'https://streamable.com/miae6r',
+    video: '/hotel.mp4',
   },
 ];

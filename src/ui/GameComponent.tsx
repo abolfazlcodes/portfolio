@@ -23,7 +23,7 @@ const GameComponent: FC<GameProps> = ({
           restDelta: 0.001,
         },
       }}
-      className='hidden h-3/4 w-full rounded-lg border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl md:flex lg:w-2/5'
+      className='hidden h-2/3 w-full rounded-lg border-[#0c1616] bg-game-board p-12 shadow-game-box-shadow backdrop-blur-xl md:flex lg:w-2/5'
     >
       <div className='flex w-full'>
         <GameBoard
