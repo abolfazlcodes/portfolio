@@ -10,6 +10,7 @@ import {
 } from '@/utils/iconsHelper';
 import FilterItem from '../../ui/FilterItem';
 import { projectsFakeData } from '@/constants';
+import { ProjectProps } from '@/interface';
 
 const DynamicProjectsCard = dynamic(
   () => import('../../ui/ProjectCard'),
@@ -18,14 +19,6 @@ const DynamicProjectsCard = dynamic(
     ssr: true,
   }
 );
-
-interface ProjectsProps {
-  id: number;
-  title: string;
-  description: string;
-  link: string;
-  tag: string;
-}
 
 const projectsFilterList = [
   { id: 1, label: 'html', value: 'html', icon: <HTMLIcon /> },
@@ -43,9 +36,9 @@ function ProjectsWrapper() {
   const [filters, setFilters] = useState<string[]>([]);
 
   const [filteredData, setFilteredData] =
-    useState<ProjectsProps[]>(projectsFakeData);
+    useState<ProjectProps[]>(projectsFakeData);
 
-  const getFilteredData = (data: ProjectsProps[]) => {
+  const getFilteredData = (data: ProjectProps[]) => {
     const updated = data.filter((projectItem) => {
       return filters.every((item) =>
         projectItem.tag.includes(item.toLowerCase())
