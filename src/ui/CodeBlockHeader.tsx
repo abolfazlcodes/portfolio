@@ -4,7 +4,7 @@ import {
 } from '@/utils/iconsHelper';
 import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
-import image from '../../public/me.jpg';
+import image from '@/public/me.jpg';
 
 function CodeBlockHeader({
   onDetails,
