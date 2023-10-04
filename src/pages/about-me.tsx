@@ -27,10 +27,9 @@ const DynamicProfessionalInfoComponent = dynamic(
   }
 );
 
-type IndexPageProps = {};
 type AboutMeTap = 'personal' | 'professional';
 
-function AboutMe({}: IndexPageProps) {
+function AboutMe() {
   const [aboutMeTab, setAboutMeTab] =
     useState<AboutMeTap>('personal');
 
