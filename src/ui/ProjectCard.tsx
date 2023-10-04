@@ -1,14 +1,9 @@
+import { ProjectProps } from '@/interface';
 import Button from './Button';
 import { useState, MouseEvent } from 'react';
 
 interface ProjectCardProps {
-  card: {
-    title: string;
-    id: number;
-    description: string;
-    link: string;
-    video: string;
-  };
+  card: ProjectProps;
 }
 
 function ProjectCard({ card }: ProjectCardProps) {
