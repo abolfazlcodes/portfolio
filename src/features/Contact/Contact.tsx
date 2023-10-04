@@ -4,12 +4,8 @@ import FormCol from '@/ui/FormCol';
 import Input from '@/ui/Input';
 import Sidebar from '@/ui/Sidebar';
 import TextAreaInput from '@/ui/TextAreaInput';
-import { Resend } from 'resend';
 import { ChangeEvent, FormEvent, useState } from 'react';
 
-const resend = new Resend(
-  process.env.NEXT_PUBLIC_RESEND_API_KEY
-);
 type InputEvent = HTMLInputElement | HTMLTextAreaElement;
 
 function Contact() {

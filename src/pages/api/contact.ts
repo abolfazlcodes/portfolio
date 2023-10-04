@@ -36,7 +36,10 @@ export default async function handler(
         message: 'Message received',
       });
     } catch (error: any) {
-      console.log(error);
+      res.status(400).json({
+        error: error,
+        message: 'An error occurred. Please try again',
+      });
     }
   }
 }

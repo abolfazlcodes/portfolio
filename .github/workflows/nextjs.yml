@@ -32,6 +32,7 @@ jobs:
       NEXT_PUBLIC_NODEMAILER_PASS: ${{ secrets.NEXT_PUBLIC_NODEMAILER_PASS }}
       NEXT_PUBLIC_NODEMAILER_EMAIL: ${{ secrets.NEXT_PUBLIC_NODEMAILER_EMAIL }}
       NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+      NEXT_PUBLIC_RESEND_API_KEY: ${{ secrets.NEXT_PUBLIC_RESEND_API_KEY }}
 
     steps:
       - name: Checkout repository
