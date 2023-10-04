@@ -5,6 +5,7 @@ import Input from '@/ui/Input';
 import Sidebar from '@/ui/Sidebar';
 import TextAreaInput from '@/ui/TextAreaInput';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 type InputEvent = HTMLInputElement | HTMLTextAreaElement;
 
@@ -39,29 +40,33 @@ function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain',
-      },
-      body: JSON.stringify({
-        name: contactForm.name,
-        email: contactForm.email,
-        message: contactForm.message,
-        date: contactForm.date,
-      }),
-    })
-      .then((res) => {
+    const emailTemplate = {
+      to_name: 'abolfazl',
+      from_name: `${contactForm.name} - email: ${contactForm.email} - date: ${contactForm.date}`,
+      message: contactForm.message,
+    };
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID!,
+        emailTemplate,
+        process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY_ID
+      )
+      .then(
+        function (response) {
+          console.log('SUCCESS!');
+        },
+        function (error) {
+          console.log('FAILED...');
+        }
+      )
+      .finally(() => {
         setContactForm({
+          date,
           name: '',
           email: '',
           message: '',
-          date,
         });
-        console.log(res, 'response');
-      })
-      .catch((err) => {
-        console.log(err, 'error sending');
       });
   };
 
