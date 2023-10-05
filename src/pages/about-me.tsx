@@ -40,10 +40,10 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
       <Sidebar setAboutMeTabs={setAboutMeTab} />
 
       <main className='flex flex-col border-r border-[#1E2D3D] md:col-span-11 xl:col-span-6 xl:flex-row'>
-        {aboutMeTab === 'personal' ? (
-          <DynamicPersonalInfoComponent />
-        ) : (
+        {aboutMeTab === 'professional' ? (
           <DynamicProfessionalInfoComponent />
+        ) : (
+          <DynamicPersonalInfoComponent />
         )}
 
         <section className='w-full-dvw md:border-t md:border-[#1e2d3d] xl:w-1/2'>
