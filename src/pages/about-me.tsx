@@ -2,6 +2,8 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import CommentSnippet from '@/ui/CommentSnippet';
 import Sidebar from '@/ui/Sidebar';
+import CodeBlock from '@/ui/CodeBlock';
+import { SnippetsProps } from '@/interface/Snippets.types';
 
 const DynamicCodeBlocksList = dynamic(
   () => import('../ui/CodeBlocksList'),
@@ -29,7 +31,7 @@ const DynamicProfessionalInfoComponent = dynamic(
 
 type AboutMeTap = 'personal' | 'professional';
 
-function AboutMe() {
+function AboutMe({ data }: { data: SnippetsProps[] }) {
   const [aboutMeTab, setAboutMeTab] =
     useState<AboutMeTap>('personal');
 
@@ -54,7 +56,14 @@ function AboutMe() {
               language='javascript'
             />
 
-            <DynamicCodeBlocksList />
+            <DynamicCodeBlocksList>
+              {data.map((snippetItem) => (
+                <CodeBlock
+                  key={snippetItem.id}
+                  code={snippetItem.snippet}
+                />
+              ))}
+            </DynamicCodeBlocksList>
           </div>
         </section>
       </main>
@@ -63,3 +72,26 @@ function AboutMe() {
 }
 
 export default AboutMe;
+
+export const getStaticProps = async () => {
+  let data: SnippetsProps[];
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/snippets`
+    );
+    const snippets = await response.json();
+
+    data = snippets.data;
+  } catch (error) {
+    throw new Error(
+      'Error fetching snippets. Please try again later.'
+    );
+  }
+
+  return {
+    props: {
+      data: data!,
+    },
+    revalidate: 3600,
+  };
+};
