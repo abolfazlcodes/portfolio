@@ -1,11 +1,9 @@
-import Button from '@/ui/Button';
 import CodeSnippetContact from '@/ui/CodeSnippetContact';
-import FormCol from '@/ui/FormCol';
-import Input from '@/ui/Input';
 import Sidebar from '@/ui/Sidebar';
-import TextAreaInput from '@/ui/TextAreaInput';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ContactsMessage from '@/ui/ContactsMessage';
+import ContactsForm from '@/ui/ContactsForm';
 
 type InputEvent = HTMLInputElement | HTMLTextAreaElement;
 
@@ -15,7 +13,7 @@ function Contact() {
     year: 'numeric',
     day: '2-digit',
   });
-
+  const [showForm, setShowForm] = useState(true);
   const [contactForm, setContactForm] = useState<{
     name: string;
     email: string;
@@ -54,10 +52,10 @@ function Contact() {
       )
       .then(
         function (response) {
-          console.log('SUCCESS!');
+          if (response.status === 200) setShowForm(false);
         },
         function (error) {
-          console.log('FAILED...');
+          console.log(error, 'FAILED...');
         }
       )
       .finally(() => {
@@ -83,42 +81,17 @@ function Contact() {
             </div>
           </header>
 
-          <form
-            className='flex h-full max-h-[83.5dvh] flex-col items-center justify-center gap-8 px-10 py-6'
-            onSubmit={handleSubmit}
-          >
-            <FormCol htmlFor='name' label='name'>
-              <Input
-                changeHandler={handleContactChange}
-                id='name'
-                name='name'
-                placeholder='Your Name'
-                value={contactForm.name}
-              />
-            </FormCol>
-            <FormCol htmlFor='email' label='email'>
-              <Input
-                changeHandler={handleContactChange}
-                id='email'
-                name='email'
-                placeholder='your@email.com'
-                value={contactForm.email}
-              />
-            </FormCol>
-            <FormCol htmlFor='message' label='message'>
-              <TextAreaInput
-                changeHandler={handleContactChange}
-                id='message'
-                name='message'
-                placeholder='Your message'
-                value={contactForm.message}
-              />
-            </FormCol>
-
-            <div className='flex w-full flex-col items-start sm:w-1/2'>
-              <Button>submit-message</Button>
-            </div>
-          </form>
+          {showForm ? (
+            <ContactsForm
+              email={contactForm.email}
+              name={contactForm.name}
+              message={contactForm.message}
+              handleFormChange={handleContactChange}
+              handleSubmit={handleSubmit}
+            />
+          ) : (
+            <ContactsMessage setShowForm={setShowForm} />
+          )}
         </div>
 
         <div className='w-full xl:w-1/2'>
