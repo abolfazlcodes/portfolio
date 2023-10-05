@@ -35,6 +35,8 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
   const [aboutMeTab, setAboutMeTab] =
     useState<AboutMeTap>('personal');
 
+  console.log(data, 'data');
+
   return (
     <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
       <Sidebar setAboutMeTabs={setAboutMeTab} />
@@ -86,6 +88,12 @@ export const getStaticProps = async () => {
     throw new Error(
       'Error fetching snippets. Please try again later.'
     );
+  }
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
   }
 
   return {
