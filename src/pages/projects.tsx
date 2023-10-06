@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 const DynamicProjectsWrapper = dynamic(
   () => import('../features/Projects/ProjectsWrapper'),
@@ -10,9 +11,19 @@ const DynamicProjectsWrapper = dynamic(
 
 function projects() {
   return (
-    <section className='flex h-full w-full flex-col bg-[#011627] md:flex-row'>
-      <DynamicProjectsWrapper />
-    </section>
+    <>
+      <Head>
+        <title>Abolfazl Jamshidi - Projects</title>
+        <meta
+          name='description'
+          content='This is the projects page listing all the projects'
+        />
+        <meta name='robots' content='noindex, nofollow' />
+      </Head>
+      <section className='flex h-full w-full flex-col bg-[#011627] md:flex-row'>
+        <DynamicProjectsWrapper />
+      </section>
+    </>
   );
 }
 
