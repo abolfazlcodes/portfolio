@@ -3,10 +3,21 @@ import CommentSnippet from './CommentSnippet';
 function PersonalInfo() {
   const aboutMe = `  /**
     * About me
-    * As a front-end with a year of hands-on experience and 
-    * a solid foundation in the field, my heart beats for 
-    * breathing life into designs.
-  */  
+    * As a front-end with a year of hands-on experience  
+    * and a solid foundation in the field, my heart  
+    * beats for breathing life into designs.  
+    * 
+    * A dedicated team player, who thrives on collaborative 
+    * problem-solving and has already left an impressive 
+    * mark by refactoring an admin dashboard with  
+    * React and TypeScript, elevating user interfaces 
+    * to new heights.
+    * 
+    * Eager to take on new challenges and continuously 
+    * enhance skills alongside my commitment to efficiency 
+    * which makes me a standout contributor in a 
+    * fast-paced environment.
+    */  
   `;
 
   return (

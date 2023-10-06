@@ -2,19 +2,17 @@ import CommentSnippet from './CommentSnippet';
 
 function ProfessionalInfo() {
   const aboutMe = `  /**
-    * About me
-    * As a front-end with 5 years of hands-on experience and 
-    * a solid foundation in the field, my heart beats for 
-    * breathing life into designs. A dedicated team player, 
-    * who thrives on collaborative problem-solving and
-    * has already left an impressive mark by refactoring 
-    * an admin dashboard with React and TypeScript, 
-    * elevating user interfaces to new heights.
+    * I have worked as a front-end developer at Mizban
+    * hosting company. I mainly worked on their 
+    * admin-panel dashboards using React, TypeScript  
+    * and Ant Design. 
+    * Supported and collaborated with the UI/UX team 
+    * to launch a successful dashboard redesign.
+    * Developed highly reusable components with Ant Design 
+    * and TypeScript to increase code efficiency.
     * 
-    * Eager to take on new challenges and continuously 
-    * enhance skills alongside my commitment to efficiency 
-    * which makes me a standout contributor in a fast-paced environment.
-    *
+    * Lead the complete dashboard overhaul, including
+    * codebase refactoring to increase code readability.
   */  
   `;
 

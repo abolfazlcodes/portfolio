@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 const DynamicContact = dynamic(
@@ -10,9 +11,23 @@ const DynamicContact = dynamic(
 
 function ContactMe() {
   return (
-    <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-11 xl:grid-cols-7'>
-      <DynamicContact />
-    </section>
+    <>
+      <Head>
+        <title>Abolfazl Jamshidi - contact form</title>
+        <meta
+          name='description'
+          content='Reach to me by submitting your message.'
+        />
+        <meta name='robots' content='index, follow' />
+        <meta
+          property='og:url'
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/contact-me`}
+        />
+      </Head>
+      <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-11 xl:grid-cols-7'>
+        <DynamicContact />
+      </section>
+    </>
   );
 }
 

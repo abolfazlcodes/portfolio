@@ -26,9 +26,9 @@ function SidebarListItem({
     >
       <span className='block duration-200 hover:-translate-y-2'>
         {name === 'personal_info' ? (
-          <PersonalInfoIcon />
-        ) : (
           <ProfessionalInfoIcon />
+        ) : (
+          <PersonalInfoIcon />
         )}
       </span>
     </li>
