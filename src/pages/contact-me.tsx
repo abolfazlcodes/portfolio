@@ -21,7 +21,7 @@ function ContactMe() {
         <meta name='robots' content='index, follow' />
         <meta
           property='og:url'
-          content='https://abolfazlcodes.github.io/portfolio/contact-me'
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/contact-me`}
         />
       </Head>
       <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-11 xl:grid-cols-7'>
