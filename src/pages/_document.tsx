@@ -4,6 +4,20 @@ import Script from 'next/script';
 export default function Document() {
   return (
     <Html lang='en'>
+      <meta
+        name='keywords'
+        content='portfolio, abolfazl jamshidi, abolfazl, jamshidi, React, NextJs, frontend, developer, javascript, typescript'
+      />
+      <meta property='og:title' content='Abolfazl Jamshidi' />
+      <meta
+        property='og:description'
+        content='This is the portfolio for Abolfazl Jamshidi. A front-end developer.'
+      />
+      <meta
+        property='og:image'
+        content='https://unsplash.com/photos/xkBaqlcqeb4'
+      />
+      <meta name='author' content='Abolfazl Jamshidi' />
       <Head>
         <link
           rel='preconnect'
