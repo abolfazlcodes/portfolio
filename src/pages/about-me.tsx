@@ -5,6 +5,7 @@ import CommentSnippet from '@/ui/CommentSnippet';
 import Sidebar from '@/ui/Sidebar';
 import CodeBlock from '@/ui/CodeBlock';
 import { SnippetsProps } from '@/interface/Snippets.types';
+import { snippets } from '@/data/snippets';
 
 const DynamicCodeBlocksList = dynamic(
   () => import('../ui/CodeBlocksList'),
@@ -88,32 +89,10 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
 
 export default AboutMe;
 export const getStaticProps = async () => {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/snippets`
-    );
-
-    if (!response.ok) {
-      throw new Error(
-        `Error fetching snippets: ${response.statusText}`
-      );
-    }
-
-    const snippets = await response.json();
-
-    return {
-      props: {
-        data: snippets.data,
-      },
-    };
-  } catch (error) {
-    console.error(error); // Log the error for debugging
-    return {
-      props: {
-        data: [],
-        error:
-          'Error fetching snippets. Please try again later.',
-      },
-    };
-  }
+  const data = snippets;
+  return {
+    props: {
+      data,
+    },
+  };
 };
