@@ -47,7 +47,7 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
         <meta name='robots' content='index, follow' />
         <meta
           property='og:url'
-          content='https://abolfazlcodes.github.io/portfolio/about-me'
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/about-me`}
         />
       </Head>
       <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
@@ -87,25 +87,33 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
 }
 
 export default AboutMe;
-
-export const getServerSideProps = async () => {
-  let data: SnippetsProps[];
+export const getStaticProps = async () => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/snippets`
     );
+
+    if (!response.ok) {
+      throw new Error(
+        `Error fetching snippets: ${response.statusText}`
+      );
+    }
+
     const snippets = await response.json();
 
-    data = snippets.data;
+    return {
+      props: {
+        data: snippets.data,
+      },
+    };
   } catch (error) {
-    throw new Error(
-      'Error fetching snippets. Please try again later.'
-    );
+    console.error(error); // Log the error for debugging
+    return {
+      props: {
+        data: [],
+        error:
+          'Error fetching snippets. Please try again later.',
+      },
+    };
   }
-
-  return {
-    props: {
-      data,
-    },
-  };
 };
