@@ -2,13 +2,15 @@ import { navigationLinks } from '@/constants';
 import ListItem from './ListItem';
 import { useRouter } from 'next/router';
 
-function ListWrapper() {
+function ListWrapper({ showMenu }: { showMenu: boolean }) {
   const { pathname } = useRouter();
 
   return (
     <ul
       data-testid='list-element'
-      className='hidden w-10/12 md:relative md:ml-auto md:flex md:items-center'
+      className={`${
+        showMenu ? 'md:flex' : 'hidden'
+      } max-[640px]:absolute max-[640px]:left-0 max-[640px]:top-20 max-[640px]:z-20 max-[640px]:h-full-dvh max-[640px]:w-full max-[640px]:bg-[#011627] md:relative md:ml-auto md:flex md:w-10/12 md:items-center`}
     >
       {navigationLinks.map((linkItem, index) => (
         <ListItem
