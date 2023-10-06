@@ -87,33 +87,25 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
 }
 
 export default AboutMe;
-export const getStaticProps = async () => {
+
+export const getServerSideProps = async () => {
+  let data: SnippetsProps[];
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/snippets`
     );
-
-    if (!response.ok) {
-      throw new Error(
-        `Error fetching snippets: ${response.statusText}`
-      );
-    }
-
     const snippets = await response.json();
 
-    return {
-      props: {
-        data: snippets.data,
-      },
-    };
+    data = snippets.data;
   } catch (error) {
-    console.error(error); // Log the error for debugging
-    return {
-      props: {
-        data: [],
-        error:
-          'Error fetching snippets. Please try again later.',
-      },
-    };
+    throw new Error(
+      'Error fetching snippets. Please try again later.'
+    );
   }
+
+  return {
+    props: {
+      data,
+    },
+  };
 };
