@@ -22,9 +22,7 @@ function Home({}: IndexPageProps) {
   return (
     <>
       <Head>
-        <title>
-          Abolfazl Jamshidi - Front-end Developer | Portfolio
-        </title>
+        <title>Abolfazl Jamshidi | Front-end Developer</title>
         <meta
           name='description'
           content='This is the portfolio for Abolfazl Jamshidi. A front-end developer using cutting-edge technologies like React and NextJS'
