@@ -14,7 +14,8 @@
     "test:coverage": "vitest --coverage",
     "cypress:open": "cypress open",
     "predeploy": "next build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -31,6 +32,7 @@
     "framer-motion": "^10.16.4",
     "highlight.js": "^11.8.0",
     "mongodb": "^6.1.0",
+    "next-sitemap": "^4.2.3",
     "next": "13.5.4",
     "nodemailer": "^6.9.5",
     "postcss": "8.4.30",

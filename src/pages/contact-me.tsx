@@ -13,7 +13,7 @@ function ContactMe() {
   return (
     <>
       <Head>
-        <title>Abolfazl Jamshidi - contact form</title>
+        <title>Abolfazl Jamshidi | contact form</title>
         <meta
           name='description'
           content='Reach to me by submitting your message.'

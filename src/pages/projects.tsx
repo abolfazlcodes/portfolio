@@ -13,7 +13,7 @@ function projects() {
   return (
     <>
       <Head>
-        <title>Abolfazl Jamshidi - Projects</title>
+        <title>Abolfazl Jamshidi | Projects</title>
         <meta
           name='description'
           content='This is the projects page listing all the projects'

@@ -40,7 +40,7 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
   return (
     <>
       <Head>
-        <title>Abolfazl Jamshidi - About Me</title>
+        <title>Abolfazl Jamshidi | About Me</title>
         <meta
           name='description'
           content='Information about my personal and professional working experience '

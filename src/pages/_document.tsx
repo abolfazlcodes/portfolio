@@ -5,6 +5,10 @@ export default function Document() {
   return (
     <Html lang='en'>
       <meta
+        name='google-site-verification'
+        content='wn5YWxKCorxG3M-bRmwqCZ_-biCfvuL1-gyFl-nC0oU'
+      />
+      <meta
         name='keywords'
         content='portfolio, abolfazl jamshidi, abolfazl, jamshidi, React, NextJs, frontend, developer, javascript, typescript'
       />

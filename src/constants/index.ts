@@ -31,13 +31,4 @@ export const projectsFakeData = [
     tag: 'css',
     video: 'morent.mp4',
   },
-  {
-    id: 3,
-    title: '_hotel-dashboard',
-    description:
-      'This is complex project built using cutting-edge technologies such as React, NextJS and TypeScript. This is a hotel admin dashboard that hotel employees can manage and filter the bookings, cabins and so on. Take a look at the demo',
-    link: 'https://wildoasis-abolfazl.vercel.app/',
-    tag: 'next',
-    video: 'hotel.mp4',
-  },
 ];
