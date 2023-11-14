@@ -10,6 +10,9 @@ const nextConfig = {
   eslint: {
     // dirs: ["pages", "ui"], // ? for production linting
   },
+  images: {
+    domains: ["unsplash.com"],
+  }
 };
 
 module.exports = nextConfig;
