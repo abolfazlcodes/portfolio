@@ -1,9 +1,5 @@
 # *
 User-agent: *
-Disallow: /projects
-
-# *
-User-agent: *
 Allow: /
 
 # Host
