@@ -4,25 +4,22 @@ import Script from 'next/script';
 export default function Document() {
   return (
     <Html lang='en'>
+      <Head>
       <meta name="google-site-verification" content="wn5YWxKCorxG3M-bRmwqCZ_-biCfvuL1-gyFl-nC0oU" />
       <meta
         name='keywords'
         content='portfolio, abolfazl jamshidi, abolfazl, jamshidi, React, NextJs, frontend, developer, javascript, typescript'
       />
       <meta property='og:title' content='Abolfazl Jamshidi' />
-      <meta
-        property='og:description'
-        content='This is the portfolio for Abolfazl Jamshidi. A front-end developer.'
-      />
+     
       <meta
         property='og:image'
-        content='https://unsplash.com/photos/xkBaqlcqeb4'
+        content='https://iabolfazl.dev/socialLinkImage.jpg'
       />
       <meta property="og:image:width" content="1280"/>
       <meta property="og:image:height" content="720"/>
       <meta property="og:description" content="Stonishing Portfolio"/>
       <meta name='author' content='Abolfazl Jamshidi' />
-      <Head>
         <link
           rel='preconnect'
           href='https://fonts.googleapis.com'
