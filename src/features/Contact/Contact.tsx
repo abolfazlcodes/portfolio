@@ -13,6 +13,7 @@ function Contact() {
     year: 'numeric',
     day: '2-digit',
   });
+
   const [showForm, setShowForm] = useState(true);
   const [contactForm, setContactForm] = useState<{
     name: string;
