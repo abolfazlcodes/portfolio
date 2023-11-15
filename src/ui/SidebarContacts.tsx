@@ -1,4 +1,5 @@
 import { EmailIcon, PhoneIcon } from '@/utils/iconsHelper';
+import Link from 'next/link';
 
 function SidebarContacts() {
   return (
@@ -15,6 +16,9 @@ function SidebarContacts() {
       <div className='mb-3 flex items-center gap-3 px-2 text-xl'>
         <PhoneIcon />
         <p>+989223110962</p>
+      </div>
+      <div className='mb-3 flex items-center gap-3 px-2 text-xl'>
+        <Link href='/about-me'>read about me</Link>
       </div>
     </article>
   );

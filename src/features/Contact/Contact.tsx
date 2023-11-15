@@ -72,7 +72,6 @@ function Contact() {
   return (
     <>
       <Sidebar showTabs={false} />
-
       <main className='flex flex-col border-r border-[#1E2D3D] md:col-span-11 md:w-full-dvw xl:col-span-6 xl:flex-row'>
         <div className='w-full border-r border-[#1E2D3D] xl:w-1/2'>
           <header className='border-b border-[#1E2D3D]'>

@@ -71,6 +71,19 @@ function Hero() {
           <Comment>
             // you can also see it on my Github page
           </Comment>
+          <Comment>
+            <Link href='/contact-me'>
+              // Have a project?
+              <span
+                style={{
+                  textDecoration: 'underline',
+                  marginLeft: '.5rem',
+                }}
+              >
+                Contact me now
+              </span>
+            </Link>
+          </Comment>
           <Link
             href='https://github.com/abolfazlcodes'
             target='_blank'
