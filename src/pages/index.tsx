@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { store } from '@/store/Store';
 import dynamic from 'next/dynamic';
 import { Provider } from 'react-redux';
@@ -21,18 +20,6 @@ type IndexPageProps = {};
 function Home({}: IndexPageProps) {
   return (
     <>
-      <Head>
-        <title>Abolfazl Jamshidi | Front-end Developer</title>
-        <meta
-          name='description'
-          content='This is the portfolio for Abolfazl Jamshidi. A front-end developer using cutting-edge technologies like React and NextJS'
-        />
-        <meta name='robots' content='index, follow' />
-        <meta
-          property='og:url'
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}`}
-        />
-      </Head>
       <section className='main m-auto flex h-full w-full flex-col items-center justify-center px-4 lg:w-full lg:flex-row'>
         <DynamicHero />
         <Provider store={store}>
