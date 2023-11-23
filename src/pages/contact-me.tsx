@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 
 const DynamicContact = dynamic(
   () => import('@/features/Contact/Contact'),
@@ -33,6 +34,17 @@ function ContactMe() {
           gtag('js', new Date()); gtag('config', 'G-VCRD0ELK2W')`}
         </Script>
       </Head>
+
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-VCRD0ELK2W`}
+      ></Script>
+      <Script id='google-analytics'>
+        {` window.dataLayer = window.dataLayer || []; function
+          gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-VCRD0ELK2W')`}
+      </Script>
+
       <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-11 xl:grid-cols-7'>
         <DynamicContact />
       </section>

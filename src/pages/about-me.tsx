@@ -6,6 +6,7 @@ import Sidebar from '@/ui/Sidebar';
 import CodeBlock from '@/ui/CodeBlock';
 import { SnippetsProps } from '@/interface/Snippets.types';
 import { snippets } from '@/data/snippets';
+import Script from 'next/script';
 
 const DynamicCodeBlocksList = dynamic(
   () => import('../ui/CodeBlocksList'),
@@ -60,6 +61,17 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
           gtag('js', new Date()); gtag('config', 'G-VCRD0ELK2W')`}
         </Script>
       </Head>
+
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-VCRD0ELK2W`}
+      ></Script>
+      <Script id='google-analytics'>
+        {` window.dataLayer = window.dataLayer || []; function
+          gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-VCRD0ELK2W')`}
+      </Script>
+
       <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-12 xl:grid-cols-7'>
         <Sidebar setAboutMeTabs={setAboutMeTab} />
 
