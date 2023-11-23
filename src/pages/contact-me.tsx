@@ -23,6 +23,15 @@ function ContactMe() {
           property='og:url'
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/contact-me`}
         />
+         <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-VCRD0ELK2W`}
+        ></Script>
+        <Script id='google-analytics'>
+          {` window.dataLayer = window.dataLayer || []; function
+          gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-VCRD0ELK2W')`}
+        </Script>
       </Head>
       <section className='grid h-full grid-rows-1 bg-[#011627] sm:grid-cols-11 xl:grid-cols-7'>
         <DynamicContact />
