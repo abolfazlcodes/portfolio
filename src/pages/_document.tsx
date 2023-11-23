@@ -40,17 +40,14 @@ export default function Document() {
           rel='stylesheet'
         ></link>
         <Script
+          async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCRD0ELK2W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VCRD0ELK2W');
-</script>
+        ></Script>
+        <Script id='google-analytics'>
+          {` window.dataLayer = window.dataLayer || []; function
+          gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}')`}
+        </Script>
       </Head>
       <body>
         <Main />
