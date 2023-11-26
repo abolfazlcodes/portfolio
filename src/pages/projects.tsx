@@ -24,6 +24,11 @@ function projects() {
           property='og:url'
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/projects`}
         />
+
+        <link
+          rel='canonical'
+          href='https://iabolfazl.dev/projects'
+        ></link>
       </Head>
 
       <Script

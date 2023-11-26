@@ -24,6 +24,11 @@ function ContactMe() {
           property='og:url'
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/contact-me`}
         />
+
+        <link
+          rel='canonical'
+          href='https://iabolfazl.dev/contact-me'
+        ></link>
       </Head>
 
       <Script

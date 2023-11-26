@@ -51,6 +51,11 @@ function AboutMe({ data }: { data: SnippetsProps[] }) {
           property='og:url'
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/about-me`}
         />
+
+        <link
+          rel='canonical'
+          href='https://iabolfazl.dev/about-me'
+        ></link>
       </Head>
 
       <Script
