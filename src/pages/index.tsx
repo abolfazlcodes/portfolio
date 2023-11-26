@@ -26,6 +26,10 @@ function Home({}: IndexPageProps) {
         <title>
           Software Engineer | Inspirational Portfolio
         </title>
+        <link
+          rel='canonical'
+          href='https://iabolfazl.dev'
+        ></link>
       </Head>
 
       <Script
