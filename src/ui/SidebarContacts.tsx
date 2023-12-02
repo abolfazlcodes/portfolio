@@ -15,7 +15,7 @@ function SidebarContacts() {
       </header>
       <div className='my-2 mb-3 flex items-center gap-3 px-2 text-xl'>
         <EmailIcon />
-        <p>user@gmail.com</p>
+        <p>abolfazljamshididev@gmail.com</p>
       </div>
       <div className='mb-3 flex items-center gap-3 px-2 text-xl'>
         <PhoneIcon />
